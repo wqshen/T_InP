@@ -9,7 +9,7 @@ Welcome to T_InP's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    热力学基础
 
