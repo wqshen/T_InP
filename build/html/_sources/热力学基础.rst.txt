@@ -329,6 +329,7 @@
 
 将静力平衡条件 :math:`\frac{dp_e}{dz} = -\rho_e g` （气块假设3）和状态方程 :math:`p_e=\rho_e R_d T_e` 代入上式可得，
 
+.. math::
 	\frac{dT_i}{T_i} = \frac{R_d}{c_p} \bigg(\frac{-\rho_e g dz}{\rho_e R_d T_e}\bigg)=-\frac{g}{c_p T_e}dz
 
 即，
@@ -343,7 +344,3 @@
 
 .. note::
 	实际工作中取 :math:`\gamma_d=1^{\circ} C /100m` 。干绝热递减率 :math:`\gamma_d` 是气块做干绝热升降运动时，  **气块** 本身温度随高度的变化率，近似可可看做常数。而气块四周环境空气（ **气层** ）的温度随高度的变化率（垂直温度递减率），可以从探空测得，其定义为 :math:`\gamma =\frac{\partial T}{\partial z}` ，是一个局地变化量，其值可以大于 :math:`\gamma_d` 也可以小于等于 :math:`\gamma_d` ，并随高度变化，不为常数。
-
-
-干绝热线
-++++++++++++++

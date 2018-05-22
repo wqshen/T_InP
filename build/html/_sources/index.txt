@@ -22,6 +22,3 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-
-.. role:: underline
-    :class: underline

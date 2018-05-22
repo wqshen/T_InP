@@ -15,6 +15,10 @@
 import sys
 import os
 import shlex
+import sphinx_rtd_theme
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -29,10 +33,16 @@ import shlex
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
-]
+
+# extensions = [
+#     'sphinx.ext.todo',
+#     'sphinx.ext.mathjax',
+# ]
+
+if on_rtd:
+	extensions = ['sphinx.ext.mathjax', 'sphinxcontrib.disqus']
+else:
+	extensions = ['sphinx.ext.mathjax', 'rst2pdf.pdfbuilder', 'sphinxcontrib.disqus']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -50,8 +60,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'T_InP'
-copyright = u'2018, wqshen'
-author = u'wqshen'
+copyright = u'2018, MCS强'
+author = u'MCS强'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -111,7 +121,8 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+# html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -120,6 +131,7 @@ html_theme = 'alabaster'
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), ]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".

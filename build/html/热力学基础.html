@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>大气热力学基础 &mdash; T_InP 0.0.1 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Welcome to T_InP’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> T_InP
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">大气热力学基础</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">理想气体状态方程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">干空气状态方程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">水汽的状态方程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">湿空气的状态方程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">小结</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#first-law-of-thermodynamics">热力学第一定律（first law of thermodynamics）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">等容过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">等压过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">小结</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">绝热过程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">气块法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">干绝热过程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">干绝热方程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">位温</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">干绝热递减率</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">T_InP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>大气热力学基础</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/热力学基础.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>大气热力学基础<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>理想气体状态方程<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>气象学上，空气可看作两种理想气体， <em>干空
+气</em> 和 <em>水汽</em> 的混合物，混合物称为湿空气。
+由于理想气体中，独立的分子之间没有相互作用，因此湿空气热力学性质可看做干空气和水汽各自特性的共同作用。</p>
+<p>理想气体状态方程，表述了热力平衡条件下，气体气压p，体积V和温度T之间的关系</p>
+<div class="math notranslate nohighlight">
+\[pV = CT\]</div>
+<p>上式中， <em>C</em> 为常数。在标准条件下（<span class="math notranslate nohighlight">\(p=1.01325*10^{5} Pa, T=273K\)</span>），简化上式，对1mol气体有，</p>
+<div class="math notranslate nohighlight">
+\[pv = C'T, 其中C' = 8.314 J\bullet K^{-1}\bullet mol^{-1}\]</div>
+<p>在标准条件下 <span class="math notranslate nohighlight">\(C'\)</span> 对于所有气体相同，因此称为通用气体常数，<span class="math notranslate nohighlight">\(C'=R^*\)</span> ，上式可写为</p>
+<div class="math notranslate nohighlight">
+\[pv = R^*T\]</div>
+<p>对于任意体积气体， <span class="math notranslate nohighlight">\(V = nv\)</span> ，其中 n 为摩尔数，上式两边同时乘以 n ，即得到任意体积理想气体状态方程</p>
+<div class="math notranslate nohighlight">
+\[pV = nR^*T\]</div>
+<p>将上式两边同时除以气体的质量 m ,可得</p>
+<div class="math notranslate nohighlight">
+\[p\frac{V}{m} = \frac{R^*T}{\frac{m}{n}}\]</div>
+<p>上式中，<span class="math notranslate nohighlight">\(\frac{V}{m}=\frac{1}{m}=\alpha\)</span> , 即为比容（specific volume of the gas），而 <span class="math notranslate nohighlight">\(\frac{m}{n}=M\)</span>，即气体的摩尔质量，定义比气体常数 <span class="math notranslate nohighlight">\(R'=\frac{R^*}{M}\)</span>，则可得到单位质量气体状态方程</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}p = \rho R'T\\p\alpha = R'T\end{aligned}\end{align} \]</div>
+</div></blockquote>
+<div class="section" id="id3">
+<h3>干空气状态方程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>定义干空气的摩尔质量</p>
+<div class="math notranslate nohighlight">
+\[M_d = \frac{\sum_{i} m_i}{\sum_{i} \frac{m_i}{M_i}}\]</div>
+<p>上式中，分子为干空气中各成分总质量（g），分母为总摩尔数（mol），i 表示第i中气体成分。干空气摩尔质量约
+为 <span class="math notranslate nohighlight">\(28.9 g \bullet mol^{-1}\)</span> ，因此可得干空气的比气体常数为</p>
+<div class="math notranslate nohighlight">
+\[R_d = R'=\frac{R^*}{M_d}=\frac{8.314 J\bullet K^{-1}\bullet mol^{-1}}{28.9 g\bullet mol^{-1}}\approx 287 J\bullet K^{-1}\bullet kg^{-1}\]</div>
+<p>代入可将干空气状态方程写为</p>
+<div class="math notranslate nohighlight">
+\[p\alpha = R_dT\]</div>
+</div>
+<div class="section" id="id4">
+<h3>水汽的状态方程<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>依据理想气体状态方程，可得水汽状态方程</p>
+<div class="math notranslate nohighlight">
+\[e = \rho_v R_v T\]</div>
+<p>其中，e为水汽压， <span class="math notranslate nohighlight">\(\rho_v\)</span> 为水汽密度， <span class="math notranslate nohighlight">\(R_v\)</span> 为水汽比气体常数， <span class="math notranslate nohighlight">\(\varepsilon=\frac{R_d}{R_v}=\frac{M_v}{M_d}=\frac{18}{28.9} \approx 0.622\)</span> ，代入上式，水汽状态方程可改写为</p>
+<div class="math notranslate nohighlight">
+\[e = \rho_v \frac{R_d}{\varepsilon}T\]</div>
+</div>
+<div class="section" id="id5">
+<h3>湿空气的状态方程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>干空气和水汽的状态方程为别为</p>
+<div class="math notranslate nohighlight">
+\[p = \rho_d R_d T
+e = \rho_v R_v T\]</div>
+<p>由道尔顿分压定律可得</p>
+<div class="math notranslate nohighlight">
+\[p = p_d + e = (\rho_d R_d + \rho_v R_v)T\]</div>
+<p>定义</p>
+<div class="math notranslate nohighlight">
+\[pR_m = \rho_d R_d + \rho_v R_v\]</div>
+<p>则湿空气状态方程可写为</p>
+<div class="math notranslate nohighlight">
+\[p = \rho R_m T\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(\rho\)</span> 为湿空气密度， <span class="math notranslate nohighlight">\(R_m\)</span> 为湿空气的比气体常数。</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R_m &amp;= R_d\frac{\rho_d}{\rho} + R_v\frac{\rho_v}{\rho}\\
+    &amp;=R_d(\frac{\rho - \rho_v}{\rho} + \frac{R_v}{R_d}\frac{\rho_v}{\rho})\\
+    &amp;=R_d(1-\frac{\rho_v}{\rho}+\frac{1}{0.622}\frac{\rho_v}{\rho})\\
+    &amp;=R_d(1-q+\frac{1}{0.622}q)\\
+    &amp;=R_d(1+0.608q)\end{split}\]</div>
+</div>
+<div class="section" id="id6">
+<h3>小结<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li>干空气状态方程： <span class="math notranslate nohighlight">\(p\alpha = R_d T\)</span> ，  <span class="math notranslate nohighlight">\(R_d\)</span> 为干空气比气体常数</li>
+<li>湿空气状态方程： <span class="math notranslate nohighlight">\(p\alpha = R_m T\)</span> ，  <span class="math notranslate nohighlight">\(R_m\)</span> 为湿空气比气体常数</li>
+<li>干空气和湿空气比气体常数之间关系： <span class="math notranslate nohighlight">\(R_m=(1+0.608q)R_d\)</span> ， <span class="math notranslate nohighlight">\(q\)</span> 为比湿</li>
+</ul>
+</div>
+</div>
+<div class="section" id="first-law-of-thermodynamics">
+<h2>热力学第一定律（first law of thermodynamics）<a class="headerlink" href="#first-law-of-thermodynamics" title="永久链接至标题">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[dQ = dU+dW\]</div>
+<p>热力学第一定律为热力系统中的能量守恒定律，其表述为，施加在某一热力系统上的全部热量 <span class="math notranslate nohighlight">\(dQ\)</span> ，一部分使系统的内能增加 <span class="math notranslate nohighlight">\(dU\)</span> ，其余使气体对外做功 <span class="math notranslate nohighlight">\(dW\)</span> 。对于单位质量系统而言，上式写为</p>
+<div class="math notranslate nohighlight">
+\[dq = du+dw\]</div>
+<p>对准静态过程而言， <span class="math notranslate nohighlight">\(dW=pdV\)</span> ，单位质量气体有 <span class="math notranslate nohighlight">\(dw=pd\alpha\)</span></p>
+<div class="section" id="id7">
+<h3>等容过程<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>等容过程定义为气体在状态变化过程中，体积保持不变，即 <span class="math notranslate nohighlight">\(d\alpha=0\)</span> ，此时气体对外做功为0，即</p>
+<div class="math notranslate nohighlight">
+\[dw=pd\alpha=0\]</div>
+<p>对理想气体而言，内能来源于系统中分子的随机和无序运动，由于分子运动主要为温度的函数，内能的增加表现为温度升高。</p>
+<div class="math notranslate nohighlight">
+\[du = c(p, \alpha) dT\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(c(p, \alpha)\)</span> 为比热，对气体而言，其不为常数。对等容过程而言，其热力学第一定律可写为</p>
+<div class="math notranslate nohighlight">
+\[dq = du = c_v dT\]</div>
+<p>上式中， <span class="math notranslate nohighlight">\(c_v=\Big(\frac{dq}{dT}\Big)_\alpha\)</span> 为定容比热。施加于气体的所有能量，一部分转化为内容，其余部分做功，能量守恒的一般形式可写为</p>
+<div class="math notranslate nohighlight">
+\[dq = c_v dT + p d\alpha\]</div>
+<p>对干空气状态方程 <span class="math notranslate nohighlight">\(p\alpha = R_d T\)</span> 进行微分，可得</p>
+<div class="math notranslate nohighlight">
+\[pd\alpha + \alpha dP = R_d dT\]</div>
+<p>代入前述能量守恒方程可得，</p>
+<div class="math notranslate nohighlight">
+\[dq = c_v dT + R_d dT - \alpha dp\]</div>
+</div>
+<div class="section" id="id8">
+<h3>等压过程<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>当加热时气压保持不变，即 <span class="math notranslate nohighlight">\(dp=0\)</span> ，即等压过程，上式可写为</p>
+<div class="math notranslate nohighlight">
+\[dq = c_v dT + R_d dT = (c_v + R_d) dT\]</div>
+<p>定义 <span class="math notranslate nohighlight">\(c_p = \big(\frac{dq}{dT} \big)_p = c_v + R_d\)</span>，则热力学第一定律可表述为另一种形式</p>
+<div class="math notranslate nohighlight">
+\[dq = c_p dT - \alpha dp\]</div>
+</div>
+<div class="section" id="id9">
+<h3>小结<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>使用定容比热和定压比热，大气热力学第一定律可表示为以下两种形式</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}dq = c_v dT + p d\alpha\\dq = c_p dT - \alpha dp\end{aligned}\end{align} \]</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>绝热过程<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>绝热过程指在改变某个系统的物理状态（压强、体积或温度）时，如果既不加入热量，也不取走热量，这种变化称为绝热变化。
+在绝热过程中，系统与环境间无热量交换，但可以有功的交换。即对绝热过程而言</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}dq = 0\\c_v dT - -p d\alpha\\或 C_p dT = \alpha dp\end{aligned}\end{align} \]</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<ol class="last arabic simple">
+<li>严格的说，实际大气不是绝热的，空气运动时，能够通过湍流交换、辐射和分子热传导等与周围环境大气交换热量。</li>
+<li>对于运动着的空气，特别是做垂直运动时，由于气压随高度变化很快，气体温度短期内就发生很大变化，热量交换对空气温度的影响远小于由空气压缩或膨胀所造成的影响，此时可忽略热交换作用，假设气块是绝热的。</li>
+<li>在一些情况下，不可认作绝热。如：近地层大气，湍流交换强，气块从地面获得热量；平流层中，气块主要受辐射过程控制；当过程进行的时间较长，热量交换的累积效应不可忽略。</li>
+</ol>
+</div>
+<div class="section" id="id11">
+<h3>气块法<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p>气块指在大气中任取一个体积微小的气块，称为空气微团，简称气块。气块是大气的一部分，初始状态与同高度上其它大气并无不同，
+但当它在假设停滞不动的环境大气中垂直位移时，就成了独立的个别部分。由于气块体积微小，因此任一时刻，气体内部的状态参数都是均匀分布的，即气块在任一时刻都处于平衡态，故气体的状态方程和热力学第一定律对微小气块都适用。</p>
+<p>气块法有如下假定：</p>
+<ol class="arabic simple">
+<li>绝热条件：气块始终保持独立完整，不与周围空气混合，升降中做绝热变化。气块与外界（环境大气）始终不发生热量交换，也无质量交换。</li>
+<li>准静态条件：升降运动中的任一时刻，气块的压强（ <span class="math notranslate nohighlight">\(p_i\)</span> ）与同高度的环境空气的压强（ <span class="math notranslate nohighlight">\(p_e\)</span> ）相等。</li>
+<li>静力平衡条件：环境空气（气层）是静止的，满足 <span class="math notranslate nohighlight">\(\frac{\partial p_e}{\partial z} = -\rho_e g\)</span> 。</li>
+</ol>
+</div>
+<div class="section" id="id12">
+<h3>干绝热过程<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>干绝热过程是指干空气在状态变化（ <span class="math notranslate nohighlight">\(p, v, T\)</span> ）过程中与外界既无热量交换也无质量交换的过程。对于未饱和湿空气来说，只要上升过程中未达到饱和，其状态变化也基本服从于干绝热过程。</p>
+<div class="section" id="id13">
+<h4>干绝热方程<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h4>
+<p>将干空气状态方程 <span class="math notranslate nohighlight">\(p\alpha = R_dT\)</span> 代入绝热过程条件 <span class="math notranslate nohighlight">\(C_p dT = \alpha dp\)</span> 可得</p>
+<div class="math notranslate nohighlight">
+\[c_p dT = \frac{R_d T}{P} dp\]</div>
+<p>设气块的初始状态压强为 <span class="math notranslate nohighlight">\(p_0\)</span> ，温度为 <span class="math notranslate nohighlight">\(T_0\)</span> ，终止状态气压为 <span class="math notranslate nohighlight">\(p\)</span> ，温度为 <span class="math notranslate nohighlight">\(T\)</span> ，对上式进行积分</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\int_{T_0}^{T} \frac{dT}{T} = \int_{p_0}^{p} \frac{R_d}{c_p} \frac{dP}{P} \Rightarrow
+     In T \arrowvert_{T_0}^{T}=\frac{R_d}{c_p} In p \arrowvert_{p_0}^{p}\\可得，\\In\big( \frac{T}{T_0}\big) = In\big(\frac{p}{p_0} \big)^{\frac{R_d}{c_p}}\\即，\\\big( \frac{T}{T_0}\big) = \big(\frac{p}{p_0} \big)^{\kappa}\end{aligned}\end{align} \]</div>
+<p>其中， <span class="math notranslate nohighlight">\(\kappa=\frac{R_d}{c_p}=\frac{c_p-c_v}{c_p}=\frac{1004-717}{1004} \approx 0.286\)</span> ，上式即为干绝热方程，也称泊松方程。其可推论以下情形：</p>
+<ul class="simple">
+<li>干绝热过程中，气压改变是温度变化的直接原因</li>
+<li>干绝热下沉，气压升高，温度增加</li>
+<li>干绝热上升，气压降低，温度减小</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h4>位温<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h4>
+<p>气块做绝热运动时，其温度随气压的改变而改变，这就为辨别气块原来的热状态带来了困难。此外，在不同气压下比较两个空气的热状态，也不能单纯的比较温度，因为还收到气压的影响，即使初始热状态相同的气块，干绝热上升到不同的而高度，温度也是不同的。为了判别气块原有的热状态，及比较两个不同气块的热状态，必须将气块订正到气压相同的情况下进行追踪和比较。基于上述原因，引入位温的概念。</p>
+<p><strong>位温</strong> 定义为，气块按干绝热过程移至标准气压（ <span class="math notranslate nohighlight">\(p_00=1000hPa\)</span> ）时气块所具有的温度，又称位置温度，常用绝对温度（K）表示。</p>
+<p>将气块原来的气压 <span class="math notranslate nohighlight">\(p\)</span> 和温度 <span class="math notranslate nohighlight">\(T\)</span> ，以及标准气压 1000hPa 代入泊松方程 ，可得到位温表达式</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+        \begin{array}{lr}
+        T_0 = \theta\\
+        p_0 = 1000 hPa\\
+        \big( \frac{T}{T_0}\big) = \big(\frac{p}{p_0} \big)^{\kappa}
+        \end{array}
+\right.
+\Rightarrow
+\theta=T(\frac{1000}{p})^{kappa}\end{split}\]</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p><strong>1 位温守恒的性质</strong></p>
+<p>对位温表达式求对数后可得，</p>
+<div class="math notranslate nohighlight">
+\[In \theta = In T + \kappa (In 1000 - In p)\]</div>
+<p>继续对上式求微分</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\theta}{\theta} = \frac{dT}{T} - \frac{R_d}{c_p}\frac{dp}{p}\]</div>
+<p>改写热力学方程 <span class="math notranslate nohighlight">\(dq = c_p dT - \alpha dp\)</span> 为</p>
+<div class="math notranslate nohighlight">
+\[dq = c_p dT - R_d T \frac{dp}{p}\]</div>
+<p>上式两边同时除以 <span class="math notranslate nohighlight">\(\frac{1}{c_p T}\)</span> ，可变换为</p>
+<div class="math notranslate nohighlight">
+\[\frac{dq}{c_p T} = \frac{dT}{T} - \frac{R_d}{c_p} \frac{dp}{p}\]</div>
+<p>结合位温变换式和热力学方程变换式，可得</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\theta}{\theta} = \frac{dq}{c_p T}\]</div>
+<p>上式表明，位温的变化由热量变化造成。当气块得到热量时，位温升高，放出热量时，位温降低，但在绝热条件下，位温保持不变。这表明，位温在干绝热过程中是守恒的。
+通过位温的变化，可以判断气块是否与外界发生了热交换。</p>
+<p><strong>2 熵</strong></p>
+<p>依据热力学第二定律，在可逆过程中，熵的变化满足</p>
+<div class="math notranslate nohighlight">
+\[ds = \frac{dq}{T}\]</div>
+<p>根据位温变化表达式 <span class="math notranslate nohighlight">\(\frac{d\theta}{\theta} = \frac{dq}{c_p T}\)</span> 可建立熵和位温之间的关系</p>
+<div class="math notranslate nohighlight">
+\[ds = c_p \frac{d \theta}{\theta}=d(c_p In\theta)\]</div>
+<p>即，</p>
+<div class="math notranslate nohighlight">
+\[s = c_p In \theta + 常数\]</div>
+<p class="last">上式表明，位温越高，熵越大，在干绝热过程中，位温和熵都是守恒量。因此，干绝热过程也是等熵过程。在天气分析中，常用等位温线（等熵线）和等熵面（等位温面）来描述大气绝热过程中的热力状态。</p>
+</div>
+</div>
+<div class="section" id="id15">
+<h4>干绝热递减率<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h4>
+<p>干绝热递减率定义为干空气块和未饱和湿空气块做绝热升降运动时，气块温度随高度的变化。具体计算方式为，气块绝热上升或下沉单位距离（通常为100m），温度降低或升高的数值，用符号 <span class="math notranslate nohighlight">\(\gamma_d\)</span> 表示，记为</p>
+<div class="math notranslate nohighlight">
+\[\gamma_d = -\frac{dT_i}{dz}\]</div>
+<p>由于绝热（满足气块假定1），且气块且气块满足热力学第一定律，方程 <span class="math notranslate nohighlight">\(c_p dT = \frac{R_d T}{P} dp\)</span> 可写为</p>
+<div class="math notranslate nohighlight">
+\[\frac{T_i}{T_i} = \frac{R_d}{c_p} \frac{dp_i}{P_i}\]</div>
+<p>同时，由于其满足准静力平衡条件（气块假设2），即任意时刻都有气块气压等于环境气压 <span class="math notranslate nohighlight">\(p_i=p_e\)</span> ，所以有 <span class="math notranslate nohighlight">\(p_i+dp_i=p_e+dp_e\)</span> ，上式可改写为</p>
+<div class="math notranslate nohighlight">
+\[\frac{T_i}{T_i} = \frac{R_d}{c_p} \frac{dp_e}{P_e}\]</div>
+<p>将静力平衡条件 <span class="math notranslate nohighlight">\(\frac{dp_e}{dz} = -\rho_e g\)</span> （气块假设3）和状态方程 <span class="math notranslate nohighlight">\(p_e=\rho_e R_d T_e\)</span> 代入上式可得，</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT_i}{T_i} = \frac{R_d}{c_p} \bigg(\frac{-\rho_e g dz}{\rho_e R_d T_e}\bigg)=-\frac{g}{c_p T_e}dz\]</div>
+<p>即，</p>
+<div class="math notranslate nohighlight">
+\[\frac{T_i}{dz} =-\frac{gT_i}{c_p T_e}\]</div>
+<p>由于气块温度约等于环境温度 <span class="math notranslate nohighlight">\(T_i \approx T_e\)</span> ，因此有</p>
+<div class="math notranslate nohighlight">
+\[\gamma_d = -\frac{dT_i}{dz} \approx \frac{g}{c_p}=\frac{9.81 m s^{-2}}{1004 J kg^{-1} K{-1}}=0.98^{\circ} C /100m\]</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">实际工作中取 <span class="math notranslate nohighlight">\(\gamma_d=1^{\circ} C /100m\)</span> 。干绝热递减率 <span class="math notranslate nohighlight">\(\gamma_d\)</span> 是气块做干绝热升降运动时，  <strong>气块</strong> 本身温度随高度的变化率，近似可可看做常数。而气块四周环境空气（ <strong>气层</strong> ）的温度随高度的变化率（垂直温度递减率），可以从探空测得，其定义为 <span class="math notranslate nohighlight">\(\gamma =\frac{\partial T}{\partial z}\)</span> ，是一个局地变化量，其值可以大于 <span class="math notranslate nohighlight">\(\gamma_d\)</span> 也可以小于等于 <span class="math notranslate nohighlight">\(\gamma_d\)</span> ，并随高度变化，不为常数。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to T_InP’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, MCS强.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
