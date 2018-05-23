@@ -329,7 +329,7 @@
 
 将静力平衡条件 :math:`\frac{dp_e}{dz} = -\rho_e g` （气块假设3）和状态方程 :math:`p_e=\rho_e R_d T_e` 代入上式可得，
 
-	\frac{dT_i}{T_i} = \frac{R_d}{c_p} \bigg(\frac{-\rho_e g dz}{\rho_e R_d T_e}\bigg)=-\frac{g}{c_p T_e}dz
+	\frac{dT_i}{T_i} = \frac{R_d}{c_p} \Big(\frac{-\rho_e g dz}{\rho_e R_d T_e}\Big)=-\frac{g}{c_p T_e}dz
 
 即，
 
@@ -362,7 +362,7 @@
 上式为T-InP图上的等 :math:`\theta` 线方程，上式对温度求偏导，可得到等 :math:`\theta` 线的斜率为
 
 .. math::
-	\biggg(\frac{\partial In \bigg(\frac{p_00}{p}\bigg)}{\partial T}\biggg) = -\frac{c_pd}{R_dT}
+	\Bigg(\frac{\partial In \Big(\frac{p_00}{p}\Big)}{\partial T}\Bigg) = -\frac{c_pd}{R_dT}
 
 在通常的气温范围内， :math:`\frac{1}{T}` 近似为常值，因此T-InP图上的干绝热线可以近似的看成是直线，向左上方倾斜。等 :math:`\theta` 线与 :math:`p_00=1000hPa` 线的交点温度  :math:`T_00` 线与位温相等，因此 :math:`T_00` 就是等  :math:`\theta` 线 所表的位温值。
 
@@ -406,7 +406,7 @@
 令 :math:`a=(L_v0 + v R_v T_0)/R_v=6764.9 K` ，对上式从 :math:`T_0=273.15 K` 和 :math:`e_s0=6.11 hPa` 积分可得，
 
 .. math::
-	In\frac{e_s}{e_{s0}}=a\frac\bigg(\frac{1}{T_0} - \frac{1}{T}\bigg) + vIn\frac{T_0}{T}
+	In\frac{e_s}{e_{s0}}=a\frac \Big(\frac{1}{T_0} - \frac{1}{T} \Big) + vIn\frac{T_0}{T}
 
 整理可得，
 
