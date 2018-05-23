@@ -561,5 +561,48 @@
 ++++++++++++++++++
 饱和湿空气上升或下降单位距离（常取100m）温度降低或升高的数值，称为湿绝热垂直减温率或湿绝热直减率，以 :math:`\gamma_s` 表示。
 
+取 1kg 饱和湿空气，其中含有 :math:`q_s kg` 含水量， :math:`1-q_s kg` 的干空气。设在起始高度 z 处，压强为 :math:`p_i` ，温度为 :math:`T_i` ，饱和比湿为  :math:`q_s` ，上升到  :math:`z+dz` 高度处，压强变为  :math:`p_i + dp_i` ，温度为 :math:`T_i + dT_i` ，饱和比湿为 :math:`q_s + dq_s` ，凝结出  :math:`dq_s kg` 的水，放出潜热  :math:`L dq_s` 。
+
+在静力平衡条件下，  :math:`p_i = p_e` ， :math:`p_e` 为起始高度气块环境空气 的压强，则有
+
+.. math::
+	p_i + dp_i = p_e + dp_e
+
+根据热力学第一定律 :math:`dq = c_p dT - \alpha dp`，及 :math:`dq = -L_v dq_s` ，可得，
+
+.. math::
+	c_{pm} dT_i - R_m T_i \frac{dp_e}{p_e} = -Lv dq_s
+
+上式中， :math:`c_{pm} = c_p (1 + 0.84q_s)` 为湿空气的定压比热， :math:`R_m = R_d (1 + 0.608q_s)` 为湿空气的比气体常数，由于 :math:`q_s<<1` ，一般可取 :math:`c_{pm} \approx c_p` ， :math:`R_m \approx R_d` ，因此上式可改写为，
+
+.. math::
+	dT_i = \frac{R_d T_i}{c_p} \frac{dp_e}{p_e} - \frac{L_v dq_s}{c_p} 
+
+因为环境空气满足 :math:`\frac{dp_e}{dz} = - \rho_e g` 和 :math:`p_e = \rho_e R_d T_e` ，二者结合即有
+
+.. math::
+	\frac{dp_e}{p_e} = - \frac{g}{R_d T_e}dz
+
+将上式代入前式可得，
+
+.. math::
+	dT_i = \frac{R_d T_i}{c_p} \Big(- \frac{g}{R_d T_e}dz \Big) - \frac{L_v dq_s}{c_p} = \frac{g T_i}{c_p T_e} dz - \frac{L_v dq_s}{c_p}
+
+可以近似地认为 :math:`\frac{T_i}{T_e} \approx 1` ，可得湿绝热直减率表达式
+
+.. math::
+	\gamma_s = -\frac{dT_i}{dz} = \frac{g}{c_p} + \frac{L_v}{c_p} \frac{dq_s}{dz}
+
+从上式也可得到湿绝热直减率和干绝热直减率间的关系为，
+
+.. math::
+	\gamma_s = \gamma_d + \frac{L_v}{c_p} \frac{dq_s}{dz}
+
+当饱和湿空气上升时， :math:`dz > 0` ， 发生凝结 :math:`dq_s < 0` ，因此 :math:`\frac{L_v}{c_p} \frac{dq_s}{dz} < 0` ，即表明此情况下湿绝热直减率小于干绝热直减率  :math:`\gamma_s < \gamma_d` 。
+
+湿绝热直减率 :math:`\gamma_s` 不是常数，而是由压强和温度共同决定。其数值范围，在 :math:`\frac{dq_s}{dz}` 很大的近地面暖湿空气团中，饱和气块温度下降较慢，约为 :math:`0.4^{\circ} C /100m` ，在对流层中部代表性数值是 :math:`0.6 ~ 0.7^{\circ} C /100m` 。在干冷的对流层上部，由于湿度小，凝结影响可以忽略，此时湿绝热直减率几乎与干绝热直减率相等 :math:`\gamma_s \approx \gamma_d` ，在T-InP图上表现为，湿绝热线（绿色虚线）向上发散并趋向于与干绝热线平行。
+
+假相当位温
++++++++++++++++++
 
 
