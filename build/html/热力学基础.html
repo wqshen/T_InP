@@ -103,6 +103,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#id13">干绝热方程</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id14">位温</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id15">干绝热递减率</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">干绝热线</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">湿绝热过程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id18">湿度参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lcl">抬升凝结高度 (LCL)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">潜热</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31">饱和湿空气的绝热过程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id34">湿绝热垂直减温率</a></li>
 </ul>
 </li>
 </ul>
@@ -403,8 +412,8 @@ e = \rho_v R_v T\]</div>
 <div class="math notranslate nohighlight">
 \[\frac{T_i}{T_i} = \frac{R_d}{c_p} \frac{dp_e}{P_e}\]</div>
 <p>将静力平衡条件 <span class="math notranslate nohighlight">\(\frac{dp_e}{dz} = -\rho_e g\)</span> （气块假设3）和状态方程 <span class="math notranslate nohighlight">\(p_e=\rho_e R_d T_e\)</span> 代入上式可得，</p>
-<div class="math notranslate nohighlight">
-\[\frac{dT_i}{T_i} = \frac{R_d}{c_p} \bigg(\frac{-\rho_e g dz}{\rho_e R_d T_e}\bigg)=-\frac{g}{c_p T_e}dz\]</div>
+<blockquote>
+<div>frac{dT_i}{T_i} = frac{R_d}{c_p} Big(frac{-rho_e g dz}{rho_e R_d T_e}Big)=-frac{g}{c_p T_e}dz</div></blockquote>
 <p>即，</p>
 <div class="math notranslate nohighlight">
 \[\frac{T_i}{dz} =-\frac{gT_i}{c_p T_e}\]</div>
@@ -415,6 +424,169 @@ e = \rho_v R_v T\]</div>
 <p class="first admonition-title">注解</p>
 <p class="last">实际工作中取 <span class="math notranslate nohighlight">\(\gamma_d=1^{\circ} C /100m\)</span> 。干绝热递减率 <span class="math notranslate nohighlight">\(\gamma_d\)</span> 是气块做干绝热升降运动时，  <strong>气块</strong> 本身温度随高度的变化率，近似可可看做常数。而气块四周环境空气（ <strong>气层</strong> ）的温度随高度的变化率（垂直温度递减率），可以从探空测得，其定义为 <span class="math notranslate nohighlight">\(\gamma =\frac{\partial T}{\partial z}\)</span> ，是一个局地变化量，其值可以大于 <span class="math notranslate nohighlight">\(\gamma_d\)</span> 也可以小于等于 <span class="math notranslate nohighlight">\(\gamma_d\)</span> ，并随高度变化，不为常数。</p>
 </div>
+</div>
+<div class="section" id="id16">
+<h4>干绝热线<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h4>
+<p><strong>状态曲线</strong> ： <strong>气块</strong> 在作垂直运动时，其温度随高度的变化曲线称为状态曲线
+<strong>干绝热线</strong> ：干绝热过程的状态曲线称为干绝热线
+<strong>湿绝热线</strong> ：湿绝热过程的状态曲线称为湿绝热线
+<strong>层结曲线</strong> ： <strong>环境空气</strong> 温度随高度的分布曲线称为层结曲线</p>
+<p>由于干绝热过程中位温和熵守恒的性质，干绝热线又称为等位温线或等熵线，在温度对数压力图中未黄色斜的实线，每间隔 <span class="math notranslate nohighlight">\(10^{\circ} C\)</span> 标出位温的值（其后括号内的值为高层250-50hPa坐标用），它表示干空气或未饱和湿空气在绝热升降过程中的状态变化曲线。</p>
+<p>由于一条干绝热线也是等位温线，根据位温式 <span class="math notranslate nohighlight">\(\theta=T(\frac{P_{00}}{p})^{kappa}\)</span> ，对任一等 <span class="math notranslate nohighlight">\(\theta\)</span> 线而言，其上温度 T 和气压 P 之间的关系为</p>
+<div class="math notranslate nohighlight">
+\[In \bigg(\frac{P_{00}}{p}\bigg) = -\frac{c_pd}{R_d}(InT-In\theta)\]</div>
+<p>上式为T-InP图上的等 <span class="math notranslate nohighlight">\(\theta\)</span> 线方程，上式对温度求偏导，可得到等 <span class="math notranslate nohighlight">\(\theta\)</span> 线的斜率为</p>
+<div class="math notranslate nohighlight">
+\[\Bigg(\frac{\partial In \Big(\frac{p_00}{p}\Big)}{\partial T}\Bigg) = -\frac{c_pd}{R_dT}\]</div>
+<p>在通常的气温范围内， <span class="math notranslate nohighlight">\(\frac{1}{T}\)</span> 近似为常值，因此T-InP图上的干绝热线可以近似的看成是直线，向左上方倾斜。等 <span class="math notranslate nohighlight">\(\theta\)</span> 线与 <span class="math notranslate nohighlight">\(p_00=1000hPa\)</span> 线的交点温度  <span class="math notranslate nohighlight">\(T_00\)</span> 线与位温相等，因此 <span class="math notranslate nohighlight">\(T_00\)</span> 就是等  <span class="math notranslate nohighlight">\(\theta\)</span> 线 所表的位温值。</p>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>湿绝热过程<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id18">
+<h4>湿度参数<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id19">
+<h5>水汽压<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h5>
+<p><strong>水汽压</strong> ：依据道尔顿分压定律，混合气体所施加的总压强，等于混合气体中的每一种气体，当它单独充满混合气体总体积时产生的压强之和。将空气看成由多种分子组成的混合气体，其中水汽的分压强称为水汽压。</p>
+</div>
+<div class="section" id="id20">
+<h5>饱和水汽压<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h5>
+<p>假设有一封闭的绝热容器，内部装有温度为 T 的纯水，假设最初容器中的空气是完全干燥的，因此水将开始蒸发，在蒸发过程中，容器中的水汽分子数目增加，水汽压也增加。当水汽压增加时，由汽相凝结返回液相的水汽分子也增加。这样水体表面的液体分子，有的离开水面成为水汽分子，有的水汽分子撞击水面，并被水面吸附为液态。凝结和蒸发同时发生，如果凝结率低于蒸发率，那么该容器中的空气在温度 T 时是未饱和的。当凝结和蒸发达到同一速率时，将处于平衡状态。此时空气和水汽的温度等于液态水的温度，且没有水分子从一个相区转移到另一个相区去的净变化，此时液面上空的空气便处于饱和状态，这种情况下的水汽分压就称为饱和水汽压。饱和水汽压就是平衡水汽压，即对于平纯水面而言，凝结率等于蒸发率。</p>
+<div class="admonition seealso">
+<p class="first admonition-title">参见</p>
+<p class="last">当我们说到“空气中的水汽是饱和的”，“空气中不能持有更多的水汽”，及“暖空气可以比冷空气持有更多的水汽”时，使人误解为空气像海绵一样吸收水汽。液相和汽相之间水分子的交换与空气的存在与否无关，更严格的说，当在某一给定温度下，水汽和液水处于平衡时，由水汽施加的压强称为“平衡水汽压”，比称为在此温度下的饱和水汽压更合适，但是由于“未饱和空气”和“饱和空气”这些表达已经根深蒂固，所以继续沿用。</p>
+</div>
+<p>饱和水汽压仅与温度有关，即 <span class="math notranslate nohighlight">\(e_s=e_s(T)\)</span> 。饱和水汽压 <span class="math notranslate nohighlight">\(e_s\)</span> 随温度 T 的变化关系可用卡劳修斯-克拉贝龙方程（Clausius-Clapeyron equation）来描述</p>
+<div class="math notranslate nohighlight">
+\[\frac{de_s}{dT} = \frac{\phi_2 - \phi_1}{\alpha_2 - \alpha_1}=\frac{L_v}{T(\alpha_2 - \alpha_1)}\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(\phi_1\)</span> 和 <span class="math notranslate nohighlight">\(phi_2\)</span> 为熵， <span class="math notranslate nohighlight">\(\alpha_1\)</span> 和 <span class="math notranslate nohighlight">\(alpha_2\)</span> 为比容，下标2表示气态，下标1表示液态， <span class="math notranslate nohighlight">\(L_v\)</span> 为汽化潜热。在一般的大气条件下， <span class="math notranslate nohighlight">\(\alpha_2 &gt;&gt; \alpha1\)</span> 。因此上式可简化为</p>
+<div class="math notranslate nohighlight">
+\[\frac{de_s}{dT} =\frac{L_v}{T\alpha_2}=\frac{L_v e_s}{R_v T^2}\]</div>
+<p>实验测得 <span class="math notranslate nohighlight">\(L_v\)</span> 是  <span class="math notranslate nohighlight">\(T\)</span> 的近似线性递减函数，可以写为</p>
+<div class="math notranslate nohighlight">
+\[L_v = L_v0 - b R_v (T - T_0)\]</div>
+<p>上式中 <span class="math notranslate nohighlight">\(T_0 = 273.15K\)</span> ， <span class="math notranslate nohighlight">\(T_0\)</span> 对应的汽化潜热为 <span class="math notranslate nohighlight">\(l_0=2500.8*10^3 J kg^{-1}\)</span>，实验常数  <span class="math notranslate nohighlight">\(b=4.9283, bR_v=2274.4 J kg^{-1} K^{-1}\)</span> ，代入上式到前式可得</p>
+<div class="math notranslate nohighlight">
+\[\frac{de_s}{dT} \approx \frac{e_s}{R_v T^2} [L_v0 - b R_v (T-T_0)]\]</div>
+<p>令 <span class="math notranslate nohighlight">\(a=(L_v0 + v R_v T_0)/R_v=6764.9 K\)</span> ，对上式从 <span class="math notranslate nohighlight">\(T_0=273.15 K\)</span> 和 <span class="math notranslate nohighlight">\(e_s0=6.11 hPa\)</span> 积分可得，</p>
+<div class="math notranslate nohighlight">
+\[In \frac{e_s}{e_{s0}} = a \Big(\frac{1}{T_0} - \frac{1}{T} \Big) + vIn \frac{T_0}{T}\]</div>
+<p>整理可得，</p>
+<div class="math notranslate nohighlight">
+\[In e_s + \frac{a}{T} + b In T = 常数\]</div>
+</div>
+<div class="section" id="id21">
+<h5>水汽密度<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h5>
+<p>水汽密度  <span class="math notranslate nohighlight">\(\rho_v\)</span> 指单位体积湿空气中所含水汽的质量，为绝对湿度参量</p>
+</div>
+<div class="section" id="id22">
+<h5>混合比<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h5>
+<p>混合比  <span class="math notranslate nohighlight">\(w\)</span> 指一定体积湿空气中，水汽质量  <span class="math notranslate nohighlight">\(m_v\)</span> 与干空气质量  <span class="math notranslate nohighlight">\(m_d\)</span> 之比，即，</p>
+<div class="math notranslate nohighlight">
+\[w = \frac{m_v}{m_d}\]</div>
+<p>混合比常用 1kg 湿空气中水汽的克数表示，故常用单位 （g/kg）。如果既无凝结也无蒸发（水汽质量不变），则气块的混合比为常数。</p>
+<p>对于温度为 T ，气压为 p 的湿空气而言， <span class="math notranslate nohighlight">\(\rho_v=\frac{e}{R_v T}， \rho_d=\frac{p-e}{R_d T}\)</span> ，分别是水汽和干空气的分密度，则混合比可表达为</p>
+<div class="math notranslate nohighlight">
+\[w = \frac{m_v}{m_d}=\frac{m_v / V}{m_d / V}=\frac{\rho_v}{\rho_d}=\frac{e}{p-e} \frac{R_d}{R_v}=\epsilon \frac{e}{p-e}\]</div>
+<p>上式中， <span class="math notranslate nohighlight">\(\epsilon \approx 0.622\)</span> ，由于水汽压很小，与总压强相比可以忽略，即 <span class="math notranslate nohighlight">\(p&gt;&gt;e\)</span> ，因此上式可简化为</p>
+<div class="math notranslate nohighlight">
+\[w \approx \epsilon \frac{e}{p}\]</div>
+</div>
+<div class="section" id="id23">
+<h5>饱和混合比<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h5>
+<p>饱和混合比 <span class="math notranslate nohighlight">\(w_s\)</span> 为相对于平纯水面饱和的一定体积空气中，水汽质量 <span class="math notranslate nohighlight">\(m_vs\)</span> 与干空气质量 <span class="math notranslate nohighlight">\(m_d\)</span> 之比，即</p>
+<div class="math notranslate nohighlight">
+\[w_s = \frac{m_{vs}}{m_d}=\frac{m_{vs} / V}{m_d / V}=\frac{\rho_{vs}}{\rho_d}=\frac{e_s}{p-e_s} \frac{R_d}{R_v}=\epsilon \frac{e_s}{p}\]</div>
+</div>
+<div class="section" id="id24">
+<h5>比湿<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h5>
+<p>比湿 <span class="math notranslate nohighlight">\(q\)</span> 为单位质量湿空气内的水汽质量，常用单位为 g/kg ，或 :math:        <cite>10^{-3} kg/kg</cite> ，为绝对湿度参量，表达式为</p>
+<div class="math notranslate nohighlight">
+\[q = \frac{m_v}{m}=\frac{m_v/m_d}{(m_v+m_d)/m_d}=\frac{w}{1+w}\]</div>
+<p>上式表明了比湿和混合比之间的关系，由于混合比 <span class="math notranslate nohighlight">\(w\)</span> 的量级只有百分之几， <span class="math notranslate nohighlight">\(w&lt;&lt;1\)</span> ，所以比湿在数值上约等于混合比，即  <span class="math notranslate nohighlight">\(q \approx w\)</span> 。</p>
+<p>与混合比类似，比湿也可以表达为水汽压的形式，如下</p>
+<div class="math notranslate nohighlight">
+\[q = \frac{m_v}{m}=\frac{m_v/V}{(m_v+m_d)/V}=\frac{\rho_v}{\rho_d + \rho_v} = \epsilon \frac{e}{p-(1- \epsilon)e}\]</div>
+<p>上式中由于 <span class="math notranslate nohighlight">\(p&gt;&gt;e\)</span> ，所以有，</p>
+<div class="math notranslate nohighlight">
+\[q \approx \epsilon \frac{e}{p}\]</div>
+<p>可见比湿与体积无关。</p>
+</div>
+<div class="section" id="id25">
+<h5>饱和比湿<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h5>
+<p>饱和比湿用 <span class="math notranslate nohighlight">\(q_s\)</span> 来表示，将 <span class="math notranslate nohighlight">\(e_s=e_s(T)\)</span> 代入比湿表达式可得饱和比湿表达式为，</p>
+<div class="math notranslate nohighlight">
+\[q_s = \epsilon \frac{e_s}{p - (1 - \epsilon)e_s}=\frac{0.622e_s}{p-0.378e_s}\]</div>
+<p>由于饱和水汽压 <span class="math notranslate nohighlight">\(e_s\)</span> 只与温度有关，因此饱和比湿 <span class="math notranslate nohighlight">\(q_s\)</span> 为气压 q 和温度 T 的函数，与空气中的水汽含量无关。</p>
+<p>上式可改写为，</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{(0.622 + 0.378q_s)}{q_s} e_s\]</div>
+<p>其等价形式为，</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}In p = In e_s + In(0.378 + 0.622/q_s)\\In\frac{p_0}{p} = - In e_s + In (\frac{p_0}{0.378+0.622/q_s})\end{aligned}\end{align} \]</div>
+<p>根据饱和水汽压关系式， <span class="math notranslate nohighlight">\(In e_s + \frac{a}{T} + b InT = 常数\)</span> ，可将上式改写为，</p>
+<div class="math notranslate nohighlight">
+\[In\frac{p_0}{p} = \frac{a}{T} + b InT + In(\frac{p_0}{0.378 + 0.622/q_s}) - 常数\]</div>
+<p>上式即为T-InP图上等饱和比湿 <span class="math notranslate nohighlight">\(q_s\)</span> 线的方程，上式对温度取偏导 <span class="math notranslate nohighlight">\((\frac{\partial}{\partial T})_{q_s}\)</span> ，可得等饱和比湿 <span class="math notranslate nohighlight">\(q_s\)</span> 线的斜率为，</p>
+<div class="math notranslate nohighlight">
+\[\Bigg(\frac{\partial In \frac{p_0}{p}}{\partial T} \Bigg)_{q_s} = - \frac{a}{T} \Big(\frac{1}{T} - \frac{b}{a} \Big)\]</div>
+<p>在大气常温范围内，以 K 为单位的 <span class="math notranslate nohighlight">\(T &lt; a/b\)</span> ，即  <span class="math notranslate nohighlight">\(1/T &gt; a/b\)</span> ， <span class="math notranslate nohighlight">\(1/T\)</span> 的变化范围很小，可以近似看成常量。因此，在任一条等 <span class="math notranslate nohighlight">\(q_s\)</span> 线上， <span class="math notranslate nohighlight">\(In \frac{p_0}{p}\)</span> 是温度 T 近似的递减函数，从而任一等 <span class="math notranslate nohighlight">\(q_s\)</span> 线是向左上方倾斜的近似直线。</p>
+<p>在近似情况下， <span class="math notranslate nohighlight">\(q \approx \epsilon \frac{e_s}{p} \approx w_s\)</span> ，因此等饱和比湿线也是等饱和混合比线。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">饱和水汽压 <span class="math notranslate nohighlight">\(e_s\)</span> 只和温度有关，饱和混合比 <span class="math notranslate nohighlight">\(w_s\)</span> 和饱和比湿 <span class="math notranslate nohighlight">\(q_s\)</span> 都只与气压和温度有关，与空气中的水汽含量无关。</p>
+</div>
+</div>
+<div class="section" id="id26">
+<h5>露点<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h5>
+<p>露点 <span class="math notranslate nohighlight">\(T_d\)</span> 为不改变气压 <span class="math notranslate nohighlight">\(p\)</span> 和 混合比 <span class="math notranslate nohighlight">\(w\)</span> （既无凝结也无蒸发）的情况下，湿空气冷却到相对于平纯水面而言达到饱和时的温度， <span class="math notranslate nohighlight">\(T_d &lt;= T\)</span> 。在露点温度下，湿空气的混合比等于饱和混合比，即 <span class="math notranslate nohighlight">\(w=w_s\)</span> 。</p>
+</div>
+<div class="section" id="id27">
+<h5>相对湿度<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h5>
+<p>相对湿度 <span class="math notranslate nohighlight">\(RH\)</span> 为混合比与相应的饱和混合比之比，以百分率表示，</p>
+<div class="math notranslate nohighlight">
+\[RH = 100 \frac{w}{w_s} \approx 100 \frac{e}{e_s}\]</div>
+<p>基于露点 <span class="math notranslate nohighlight">\(T_d\)</span> ，相对湿度可表达为，</p>
+<div class="math notranslate nohighlight">
+\[RH = 100 \frac{w_s (温度为T_d，压强为p) }{w_s (温度为T，压强为p)}\]</div>
+<p>对于 <span class="math notranslate nohighlight">\(RH &gt; 50%\)</span> 的湿空气来说， <span class="math notranslate nohighlight">\(RH\)</span> 转换为露点温度差  <span class="math notranslate nohighlight">\(T - T_d\)</span> 的一个简单规则是，相对湿度每减少 5%，露点温度降低约 1度。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">相对湿度和温度露点差反映了空气距离饱和的程度。</p>
+</div>
+</div>
+</div>
+<div class="section" id="lcl">
+<h4>抬升凝结高度 (LCL)<a class="headerlink" href="#lcl" title="永久链接至标题">¶</a></h4>
+<p>抬升凝结高度指未饱和湿空气绝热抬升至相对于平纯水面饱和时所达到的高度。</p>
+<p>未饱和湿空气被外力强迫抬升时，因为上升速度快，可以认为是绝热的。湿空气在绝热抬升过程中，一开始经历的是干绝热过程，水汽没有凝结也没有外界水汽的补充，因此比湿 q 、混合比 w 和位温 <span class="math notranslate nohighlight">\(\theta\)</span> 保持不变，但饱和比湿却在逐渐变小。当饱和比湿的值降到与气块比湿相等时，气块呈饱和状态。在一般情况下，达到饱和状态时就可开始凝结，把未饱和湿空气绝热上升到刚达到饱和状态时的高度，称为凝结高度，用 <span class="math notranslate nohighlight">\(z_c\)</span> 表示。由于气块上升主要是由于抬升作用引起，因此又称为抬升凝结高度。在此高度上，气块的温度等于露点温度。</p>
+</div>
+<div class="section" id="id28">
+<h4>潜热<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h4>
+<p>温度不发生变化，物质发生相变时吸收或放出的热量称为“潜热”。物质由低能状态转变为高能状态时吸收潜热，反之放出潜热。例如，液体沸腾时吸收的潜热一部分用来克服分子间的引力，另一部分用来在膨胀过程中反抗大气压强做功。溶解热，汽化热、升华热都是潜热。潜热的量值常常用单位质量的物质或用每摩尔物质在相变时所吸收或放出的热量来表示。</p>
+<p>汽化或蒸发潜热定义为单位质量物质由液相转化为汽相而温度不变时所需要的热量。对于水来说， 1 atm 和 <span class="math notranslate nohighlight">\(1 ^{\circ} C\)</span> ，汽化潜热为 2.25*10 <a href="#id29"><span class="problematic" id="id30">**</span></a>6 J kg-1 。在相同的压力和温度下，凝结潜热和蒸发潜热相等，表示从汽相变化液相时所释放的热量。注意在不同压力和温度，汽化潜热的值是不同的。</p>
+<p>汽化潜热随温度升高而减小，因为在较高温度下液体分子具有较大动能，液相与汽相差别减少。在临界温度下，物质处于临界态，气相和液相差别消失，汽化热为零。</p>
+</div>
+<div class="section" id="id31">
+<h4>饱和湿空气的绝热过程<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h4>
+<p>当一未饱和湿空气上升时，其温度变化遵循干绝热递减率，随高度而减低，当达到抬升凝结高度后变化饱和湿空气。进一步上升将凝结出液态水（或凝固出冰晶），并释放潜热。</p>
+<p>下面讨论饱和湿空气块在绝热上升过程中可能出现的两种极端情形。</p>
+<div class="section" id="id32">
+<h5>可逆湿绝热过程<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h5>
+<p>气块绝热上升时产生的凝结物全部留在气块内，随气块一起上升，当气块从上升运动转为下降时，绝热增温引起水滴蒸发，以维持气块的饱和状态。由于气块上升过程中水汽凝结释放的潜热与气块绝热下降过程水滴蒸发吸收的潜热相等。因此，气块绝热上升时的减温率和气块绝热下降时的增温率相等。该过程是可逆的，称为可逆湿绝热过程。在这种情况下只有云而无降水。</p>
+</div>
+<div class="section" id="id33">
+<h5>假绝热过程<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h5>
+<p>气块上升时所产生的全部凝结物立即掉出气块，这样当气块从上升转为下沉时，绝热增温使得气块呈不饱和状态。由于气块上升过程是湿绝热过程，下沉时为干绝热过程，因此当气块下降到原来起始高度时，温度比原来的高。该过程是不可逆的。而且，由于凝结物脱离了气块，气块与外界发生了能量交换，不是严格绝热的。因此认为气块经历了一次假绝热过程。这种极端情况全是降水而没有云。焚风是假绝热过程的例子。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">实际大气中发生的湿绝热过程，介于可逆湿绝热过程和假绝热过程之间，即部分凝结物脱离气块，部分凝结物留在气块内随气块上升，这相当于既有云也有降水的情况。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id34">
+<h4>湿绝热垂直减温率<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h4>
+<p>饱和湿空气上升或下降单位距离（常取100m）温度降低或升高的数值，称为湿绝热垂直减温率或湿绝热直减率，以 <span class="math notranslate nohighlight">\(\gamma_s\)</span> 表示。</p>
 </div>
 </div>
 </div>

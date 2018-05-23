@@ -406,7 +406,7 @@
 令 :math:`a=(L_v0 + v R_v T_0)/R_v=6764.9 K` ，对上式从 :math:`T_0=273.15 K` 和 :math:`e_s0=6.11 hPa` 积分可得，
 
 .. math::
-	In\frac{e_s}{e_{s0}}=a\frac \Big(\frac{1}{T_0} - \frac{1}{T} \Big) + vIn\frac{T_0}{T}
+	In \frac{e_s}{e_{s0}} = a \Big(\frac{1}{T_0} - \frac{1}{T} \Big) + vIn \frac{T_0}{T}
 
 整理可得，
 
@@ -495,7 +495,7 @@
 上式即为T-InP图上等饱和比湿 :math:`q_s` 线的方程，上式对温度取偏导 :math:`(\frac{\partial}{\partial T})_{q_s}` ，可得等饱和比湿 :math:`q_s` 线的斜率为，
 
 .. math::
-	\biggg(\frac{\partial In \frac{p_0}{p}}{\partial T} \biggg)_{q_s} = - \frac{a}{T} \bigg(\frac{1}{T} - \frac{b}{a} \bigg)
+	\Bigg(\frac{\partial In \frac{p_0}{p}}{\partial T} \Bigg)_{q_s} = - \frac{a}{T} \Big(\frac{1}{T} - \frac{b}{a} \Big)
 
 在大气常温范围内，以 K 为单位的 :math:`T < a/b` ，即  :math:`1/T > a/b` ， :math:`1/T` 的变化范围很小，可以近似看成常量。因此，在任一条等 :math:`q_s` 线上， :math:`In \frac{p_0}{p}` 是温度 T 近似的递减函数，从而任一等 :math:`q_s` 线是向左上方倾斜的近似直线。
 
