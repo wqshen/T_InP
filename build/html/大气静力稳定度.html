@@ -86,7 +86,19 @@
 <li class="toctree-l1"><a class="reference internal" href="热力学基础.html">大气热力学基础</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">大气静力稳定度</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id2">气块法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">静力不稳定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">静力不稳定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">判据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">密度形式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">温度形式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">垂直温度递减率形式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">位温形式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">条件性不稳定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">对流性不稳定</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -166,9 +178,155 @@
 <li>准静态条件：升降运动中的任一时刻，气块的压强（ <span class="math notranslate nohighlight">\(p_i\)</span> ）与同高度的环境空气的压强（ <span class="math notranslate nohighlight">\(p_e\)</span> ）相等。</li>
 <li>静力平衡条件：环境空气（气层）是静止的，满足 <span class="math notranslate nohighlight">\(\frac{\partial p_e}{\partial z} = -\rho_e g\)</span> 。</li>
 </ol>
+<p>上述假设下的气块是简单化、理想化的模型，对实际气块来说，上述假设不太能完全满足。但是气块法对于研究升降运动中气块的状态变化规律、了解影响大气中垂直运动分布及垂直混合的某些物理过程是有帮助的。气块法只能在气块做微小位移时才能得到较为可靠的静力稳定度判据。对于有限位移，得到的只是包含相当误差的量值，即便如此，并不妨碍它对静力稳定度的一些讨论所起的作用，并可得到许多正确的定性结论。</p>
+<p>在许多流体力学问题中，把混合看成是单个分子不规则运动的结果。但是在大气中，分子混合仅在表面 1cm 以内以及湍流层顶（turbopause, 85-110 km 的大气层，是从湍流混合为主过渡到分子扩散为主的过渡带。大气成分也有均质层到非均值层过渡的特点）以上是重要的。在介乎其间的高度内，所有的垂直混合都是由气块的交换完成的。</p>
 </div>
 <div class="section" id="id3">
 <h2>静力不稳定<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h3>概念<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>气象中所指的对流是指由于浮力作用导致的垂直方向的热量传输。浮力越强，产生的上升运动越强，越容易形成深厚湿对流。静力稳定度能够反映气块在特定大气层结（大气温度和湿度在垂直方向上的分布）中所受浮力状况。假定大气静止，且不受其中升降气块的影响，从气层中任选一气块，当此气块受到垂直方向的冲击力而离开原位后，如果气块受到回复力又回到初始位置，则称该气层为稳定气层（ <strong>静力稳定</strong> ）。如果气块加速离开其初始位置，则称该气层是不稳定气层（ <strong>静力不稳定</strong> ），如果气块获得的加速度为零，保持惯性做等速运动，则称该气层是中性气层（ <strong>中性大气</strong> ）。</p>
+<div class="admonition attention">
+<p class="first admonition-title">注意</p>
+<p class="last">大气静力稳定度只是用来描述大气层结对气块的垂直运动产生什么影响（加速、减速或等速）的一个概念，这种影响只有当气块受到外界的冲击力以后才会表现出来，它并不表示大气中已经存在的对流运动。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>判据<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>考虑一个气块，假设它与环境之间没有热量、水分和动量的交换。环境空气处于静力平衡状态，即</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial p_e}{\partial z} = -\rho_e g\]</div>
+<p>若气块有垂直加速度，其垂直方向的运动方程为，</p>
+<div class="math notranslate nohighlight">
+\[\rho' \frac{dw'}{dt} = -\frac{\partial p'}{\partial z} - \rho' g\]</div>
+<p>上式表明气块垂直加速度的大小和方向取决于气块所有合力（气压梯度力和重力之差）的大小和方向。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">公式中凡是带有下标 “e” 的均表示环境空气，凡是带有上标 “’” 的都表示气块。</p>
+</div>
+<div class="section" id="id6">
+<h4>密度形式<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<p>根据准静态条件，气块的气压梯度取决于周围大气的气压梯度，所以</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial p'}{\partial z} = \frac{\partial p_e}{\partial z} = -\rho_e g\]</div>
+<p>将上式代入前式可得，</p>
+<div class="math notranslate nohighlight">
+\[\rho' \frac{dw'}{dt} = \rho_e g - \rho' g\]</div>
+<p>则气块垂直方向的加速度可以表达密度形式为，</p>
+<div class="math notranslate nohighlight">
+\[\frac{dw'}{dt} = \frac{\rho_e - \rho'}{\rho'} g\]</div>
+<p>上式的物理意义为，气块垂直方向速度的变化是由气块内外的密度差引起的。</p>
+</div>
+<div class="section" id="id7">
+<h4>温度形式<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
+<p>根据气体状态方程， <span class="math notranslate nohighlight">\(p_e = \rho_e R T_e\)</span> ， <span class="math notranslate nohighlight">\(p' = \rho' R T'\)</span> 可将上式表达为温度差的形式，</p>
+<div class="math notranslate nohighlight">
+\[\frac{dw'}{dt} = \frac{T' - T_e}{T_e} g\]</div>
+<p>上式中 <span class="math notranslate nohighlight">\(T'\)</span> 和  <span class="math notranslate nohighlight">\(T_e\)</span> 分别表示气块和环境的温度， <span class="math notranslate nohighlight">\(\frac{T' - T_e}{T_e} g\)</span> 为气块所受合力。合力大小取决于气块和环境温差的大小和正负。上式表明，当气块温度大于环境温度，即 <span class="math notranslate nohighlight">\(T' &gt; T_e\)</span> ，气块所受浮力大于重力，合力大于零，因此气块获得上升加速度。</p>
+</div>
+<div class="section" id="id8">
+<h4>垂直温度递减率形式<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
+<p>引入垂直温度递减率，则气块和环境的温度分别按照下面的关系随着高度变化，</p>
+<p>气块温度 <span class="math notranslate nohighlight">\(T' = T_0' - \gamma' dz\)</span> ，其中 <span class="math notranslate nohighlight">\(T_0'\)</span> 为初始位置的气块温度， <span class="math notranslate nohighlight">\(\gamma' = -\frac{dT'}{dz}\)</span> 为气块绝热运动时的温度垂直递减率，如果气块是干空气或未饱和湿空气， <span class="math notranslate nohighlight">\(\gamma'\)</span> 取为 <a href="#id13"><span class="problematic" id="id14">干绝热递减率_</span></a>  <span class="math notranslate nohighlight">\(\gamma_d = \frac{g}{c_p} \approx 1^{\circ}C/100m\)</span> ，近似为常数。如果气块是饱和湿空气， <span class="math notranslate nohighlight">\(\gamma'\)</span> 取为 <a href="#id15"><span class="problematic" id="id16">湿绝热递减率_</span></a> <span class="math notranslate nohighlight">\(\gamma_s\)</span> ，其不为常数，在近地面暖气团中，约为 <span class="math notranslate nohighlight">\(0.4^{circ}C/100m\)</span>，在对流层中部为 <span class="math notranslate nohighlight">\(0.6 - 0.7^{circ}C/100m\)</span> ，在干冷的对流层上部，其与干绝热递减率近似相等。</p>
+<p>环境温度 <span class="math notranslate nohighlight">\(T_e = T_{0e} - \gamma dz\)</span> ，其中 <span class="math notranslate nohighlight">\(T_{0e}' 为初始位置的环境温度， :math:\)</span>gamma = -frac{dT_e}{dz}` 为环境（探空曲线）的垂直温度递减率。</p>
+<p>假设初始是气块温度和同高度上的环境温度相同，即 <span class="math notranslate nohighlight">\(T_o = T_{0e}\)</span> ，则可将气块垂直加速度表达为温度直减率的形式，</p>
+<div class="math notranslate nohighlight">
+\[\frac{dw'}{dt} = \frac{g}{T_e} (\gamma - \gamma') dz\]</div>
+<p>上式表明，气块是否获得加速度上升，取决于气块温度 <span class="math notranslate nohighlight">\(T'\)</span> 是否大于 环境温度 <span class="math notranslate nohighlight">\(T_e'\)</span> ，也就是取决于大气层结的垂直温度递减率 <span class="math notranslate nohighlight">\(\gamma' 是否大于气块的垂直温度递减率 :math:\)</span>gamma’` 。当大气层结的垂直温度递减率大于气块时，气块上升后，气块温度大于环境温度，气块获得上升加速度。</p>
+<p>因此，对于同一气块而言，当气层具有不同的垂直温度递减率时，气层可能促进、抑制、或者既不促进也不抑制气块做垂直运动，分别称之为 <strong>不稳定层结</strong> （ <span class="math notranslate nohighlight">\(\gamma &gt; \gamma'\)</span> ）、 <strong>稳定层结</strong> （<span class="math notranslate nohighlight">\(\gamma &lt; \gamma'\)</span>） 和 <strong>中性层结</strong> （<span class="math notranslate nohighlight">\(\gamma = \gamma'\)</span>） 。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>除层结本身，还应区分气块是否饱和。</p>
+<p>对于未饱和湿空气（或干空气），气块垂直温度递减率 <span class="math notranslate nohighlight">\(\gamma'\)</span> 为干绝热温度递减率 <span class="math notranslate nohighlight">\(\gamma_d\)</span> ，此时气层稳定度取决于环境温度垂直递减率 <span class="math notranslate nohighlight">\(\gamma\)</span> 与干绝热递减率 <span class="math notranslate nohighlight">\(\gamma_d\)</span> 的对比。 <span class="math notranslate nohighlight">\(\gamma &gt; \gamma_d\)</span> 时层结不稳定， <span class="math notranslate nohighlight">\(\gamma = \gamma_d\)</span> 时层结中性， <span class="math notranslate nohighlight">\(\gamma &lt; \gamma_d\)</span> 时层结稳定。</p>
+<p class="last">对于饱和湿空气而言，气块垂直温度递减率 <span class="math notranslate nohighlight">\(\gamma'\)</span> 为湿绝热递减率 <span class="math notranslate nohighlight">\(\gamma_s\)</span> ，气层稳定度取决于环境温度垂直递减率 <span class="math notranslate nohighlight">\(\gamma\)</span> 与湿绝热递减率 <span class="math notranslate nohighlight">\(\gamma_s\)</span> 的对比。 <span class="math notranslate nohighlight">\(\gamma &gt; \gamma_s\)</span> 时层结不稳定， <span class="math notranslate nohighlight">\(\gamma = \gamma_s\)</span> 时层结中性， <span class="math notranslate nohighlight">\(\gamma &lt; \gamma_s\)</span> 时层结稳定。</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>位温形式<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
+<p>因为位温在干绝热过程中具有保守性，对于未饱和湿空气（干空气）可以用位温随高度的分布情况来判断大气层结稳定度。根据位温公式（环境大气），</p>
+<div class="math notranslate nohighlight">
+\[\theta=T(\frac{1000}{p})^{\kappa}\]</div>
+<p>上式两边取对数，并对高度 z 求偏导可得，</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\theta} \frac{\partial \theta}{\partial z} = \frac{1}{T} \frac{\partial T}{\partial z} - \frac{R_d}{c_p} \frac{1}{p} \frac{\partial p}{\partial z}\]</div>
+<p>利用垂直温度递减率公式、状态方程、静力平衡方程和干绝热递减率公式代入上式，可得，</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \theta}{\partial z} = - \frac{\theta}{T} (\gamma - \gamma_d)\]</div>
+<p>上式中，由于 <span class="math notranslate nohighlight">\(\frac{\theta}{T} &gt; 0\)</span> ，所以位温随高度的分布 <span class="math notranslate nohighlight">\(\frac{\partial \theta}{\partial z}\)</span> 取决于环境温度递减率 <span class="math notranslate nohighlight">\(\gamma\)</span> 和干绝热递减率 <span class="math notranslate nohighlight">\(\gamma_d\)</span> 的对比。</p>
+<p>与温度垂直递减率表达的静力稳定度判据相结合可得到位温表示的静力稳定度判据为， <span class="math notranslate nohighlight">\(\frac{\partial \theta}{\partial z} &lt; 0\)</span> 为静力不稳定， <span class="math notranslate nohighlight">\(\frac{\partial \theta}{\partial z} = 0\)</span> 为中性， <span class="math notranslate nohighlight">\(\frac{\partial \theta}{\partial z} &gt; 0\)</span> 为静力稳定。</p>
+<div class="section" id="id10">
+<h5>假相当位温形式<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h5>
+<p>假相当位温在干、湿绝热过程中都具有保守性，可以用假相当位温随高度的分布情况来判断气块饱和时的层结稳定度。根据假相当位温公式，</p>
+<div class="math notranslate nohighlight">
+\[\theta_{se} = \theta \cdot exp \Big(\frac{L_v q_s}{c_pT_c} \Big)\]</div>
+<p>上式两边取对数，并对高度 z 求偏导可得，</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\theta_{se}} \frac{\partial \theta_{se}}{\partial z} = \frac{1}{T} \frac{\partial T}{\partial z} - \frac{R_d}{c_p} \frac{1}{p} \frac{\partial p}{\partial z} + \frac{L_v q_s}{c_p T_e} \frac{dq_s}{dz}\]</div>
+<p>将环境垂直温度递减率公式 <span class="math notranslate nohighlight">\(\gamma = -\frac{dT}{dz}\)</span> ，<span class="math notranslate nohighlight">\(\gamma_s = \gamma_d + \frac{L_v}{c_p} \frac{dq_s}{dz} = \frac{g}{c_{pd}} + \frac{L_v}{c_p} \frac{dq_s}{dz}\)</span> ，状态方程 <span class="math notranslate nohighlight">\(p = \rho R_d T\)</span> 和静力平衡方程  <span class="math notranslate nohighlight">\(\frac{\partial p}{\partial z} = -\rho g\)</span> 代入上式，并近似认为 <span class="math notranslate nohighlight">\(T_c = T\)</span> 可得，</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \theta_{se}}{\partial z} = - \frac{\theta_{se}}{T} (\gamma - \gamma_s)\]</div>
+<p>上式中，由于 <span class="math notranslate nohighlight">\(\frac{\theta_{se}}{T} &gt; 0\)</span> ，所以假相当位温随高度的分布 <span class="math notranslate nohighlight">\(\frac{\partial \theta_{se}}{\partial z}\)</span> 取决于环境温度递减率 <span class="math notranslate nohighlight">\(\gamma\)</span> 和湿绝热递减率 <span class="math notranslate nohighlight">\(\gamma_s\)</span> 的对比。</p>
+<p>与温度垂直递减率表达的静力稳定度判据相结合可得到假相当位温表示的静力稳定度判据为， <span class="math notranslate nohighlight">\(\frac{\partial \theta_{se}}{\partial z} &lt; 0\)</span> 为静力不稳定， <span class="math notranslate nohighlight">\(\frac{\partial \theta_{se}}{\partial z} = 0\)</span> 为中性， <span class="math notranslate nohighlight">\(\frac{\partial \theta_{se}}{\partial z} &gt; 0\)</span> 为静力稳定。</p>
+<p>假湿球位温以及相当位温与假相当位温的性质类似，在干、湿绝热过程中都具有保守性，上述稳定度判据中的假相当位温也可以换成假湿球位温或相当位温。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>条件性不稳定<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p>实际大气中，气块的水汽一般不饱和， <span class="math notranslate nohighlight">\(\frac{\partial \theta}{\partial z} &gt; 0\)</span> ，因此大气往往是静力稳定的。对流天气一般不是直接有静力不稳定造成，而通常是由“条件性”不稳定造成。条件性不稳定是指当有一种力量是的不饱和湿空气抬升，这是气层对于气块而言是静力稳定的，但当气块达到抬升凝结高度饱和后，对于饱和湿空气而言，气层是静力不稳定的。为了区分第二类条件不稳定（CISK），也称之为第一类条件不稳定。</p>
+<p>由于 <span class="math notranslate nohighlight">\(\gamma'\)</span> 包括了  <span class="math notranslate nohighlight">\(\gamma_d\)</span> 和 <span class="math notranslate nohighlight">\(\gamma_s\)</span> ，且总有 <span class="math notranslate nohighlight">\(\gamma_d &gt; \gamma_s\)</span> ，因此当， <span class="math notranslate nohighlight">\(\gamma &gt; \gamma_d &gt; \gamma_s\)</span> 时为绝对不稳定（干绝热不稳定）， <span class="math notranslate nohighlight">\(\gamma &lt; \gamma_s &lt; \gamma_d\)</span> 时为绝对稳定， <span class="math notranslate nohighlight">\(\gamma_s &lt; \gamma &lt; \gamma_d\)</span> 时为条件性不稳定。</p>
+<p>条件性不稳定还有两种特殊情况，分别为</p>
+<ol class="arabic simple">
+<li>当 <span class="math notranslate nohighlight">\(\gamma_s &lt; \gamma = \gamma_d\)</span> ，表示气层对于未饱和湿空气而言是中性的，对饱和湿空气而言是不稳定的。对于产生午后热力对流的层结，往往具有这样的探空特征。</li>
+<li>当 <span class="math notranslate nohighlight">\(\gamma_s = \gamma &lt; \gamma_d\)</span> ，表示气层对于未饱和湿空而言是稳定的，对于饱和湿空气而言是中性的。</li>
+</ol>
+<div class="admonition attention">
+<p class="first admonition-title">注意</p>
+<p class="last">大气层结曲线的 <span class="math notranslate nohighlight">\(\gamma\)</span> 并不是处处相等的，因此气块法只能判断较薄气层（此时才能假定 <span class="math notranslate nohighlight">\(\gamma\)</span> 是常数）的层结稳定度。</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>对流性不稳定<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>前述静力稳定度判据，包括条件不稳定判据是假设气块在气层中浮升时，气层本身是静止的。但实际大气常会发生整层空气被抬升的情况，如气流过山，空气沿着锋面抬升等。一般把气层被整层抬升到饱和时的稳定度称为对流性稳定度。不论气层原先的层结性如何，在其被抬升达到饱和后如果层结是稳定的，称气层为对流性稳定，如果层结不稳定，称气层为对流性不稳定，如果层结中性，则称气层为对流性中性。</p>
+<p>气层被抬升后，它本身的 <span class="math notranslate nohighlight">\(\gamma\)</span> 会发生变化，在上干下湿的条件性稳定层结下，如果有较大的抬升运动，特别是整层大气得到抬升时，原先的稳定层结就可能变为不稳定。</p>
+<p>假设AB为气层的原始层结，A、B分别位于 1000hPa 和 900hPa， <span class="math notranslate nohighlight">\(\gamma &lt; \gamma_s &lt; \gamma_d\)</span> ，层结绝对稳定（逆温层）， <span class="math notranslate nohighlight">\(A'B'\)</span> 为 其露点分布，上干下湿。假设气层被抬升时，其水平截面积不发生任何变化，由于质量守恒原理，顶部和底部之间的气压差也不发生变化，一开始，整层抬升时，A、B两点都按照干绝热线上升，由于A点湿度大，比B点先打到饱和。假设A点在 900hPa （C点）达到饱和，即抬升凝结高度为 900hPa ，此时B点达到 800hPa (D点)，还没有饱和，如果继续被抬升，则A点沿着湿绝热线上升，而B点继续按照干绝热线上升，直到B点达到其凝结高度F点，整层达到饱和。此时A点移动到了E点。EF为气层被足够的外力（如锋面抬升、气流过山）整层抬升到饱和状态时的温度垂直分布曲线，此时 <span class="math notranslate nohighlight">\(\gamma &gt; \gamma_s\)</span> ，因此气层是不稳定的。</p>
+<p>对流性不稳定满足：顶部B点的假湿球位温（或假相当位温、相当位温）小于底部A点的假湿球位温（或假相当位温、相当位温）。因此对流性不稳定可以写为，</p>
+<ul>
+<li><dl class="first docutils">
+<dt>对流性不稳定</dt>
+<dd><div class="first last math notranslate nohighlight">
+\[\frac{\partial \theta_{sw}}{\partial z} &lt; 0 或 \frac{\partial \theta_{se}}{\partial z} &lt; 0 或 \frac{\partial \theta_e}{\partial z} &lt; 0\]</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>对流性稳定</dt>
+<dd><div class="first last math notranslate nohighlight">
+\[\frac{\partial \theta_{sw}}{\partial z} &gt; 0 或 \frac{\partial \theta_{se}}{\partial z} &gt; 0 或 \frac{\partial \theta_e}{\partial z} &gt; 0\]</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>对流性中性</dt>
+<dd><div class="first last math notranslate nohighlight">
+\[\frac{\partial \theta_{sw}}{\partial z} = 0 或 \frac{\partial \theta_{se}}{\partial z} = 0 或 \frac{\partial \theta_e}{\partial z} = 0\]</div>
+</dd>
+</dl>
+</li>
+</ul>
+<p>引入对流性不稳定的概念，补充和改进了气块法的稳定度判据。即当气层有可能被整层抬升时，即使 <span class="math notranslate nohighlight">\(\gamma &lt; \gamma_s\)</span> ，只要</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \theta_{sw}}{\partial z} &lt; 0 或 \frac{\partial \theta_{se}}{\partial z} &lt; 0 或 \frac{\partial \theta_e}{\partial z} &lt; 0\]</div>
+<p>气层任然有可能变成不稳定，很多强对流天气过程都发生在对流不稳定的情况下。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p><strong>对流性不稳定和条件性不稳定对比</strong></p>
+<ul class="last simple">
+<li>对流性不稳定和条件性不稳定都是潜在不稳定，需要有一定的外加抬升力才能使得潜在的不稳定转换为真实的不稳定。</li>
+<li>对流性不稳定的触发机制是要有大范围的抬升运动，且抬升运动能使不稳定气层达到饱和，因此需要有天气尺度系统（如锋面）的配合或地形的抬升机制。造成的对流性天气往往比较剧烈，水平范围也大。而条件性不稳定除了上述触发机制外，局地的热对流或动力因子对空气的抬升也可以将不稳定能量释放，从而造成局地性的对流天气。</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 
