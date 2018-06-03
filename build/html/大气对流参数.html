@@ -89,7 +89,7 @@
 <li class="toctree-l1"><a class="reference internal" href="中尺度天气系统.html">中尺度天气系统</a></li>
 <li class="toctree-l1"><a class="reference internal" href="深厚湿对流.html">深厚湿对流的分类和发生发展的天气和环境条件</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">大气对流参数</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">热力稳定度指数</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">热力稳定度指数（普遍性的参数）</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">条件性稳定度指数</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#si">沙氏指数Si</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#li">抬升指数Li</a></li>
@@ -199,73 +199,370 @@
             
   <div class="section" id="id1">
 <h1>大气对流参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>气象工作者从多年的业务实践中，总结了许多对普通雷暴和强雷暴预报具有指示意义、应用价值的物理参数，我们称之为对流参数。近年来，随着探测手段的进步及数值模式的发展，人们对强天气想象的认识不断深入，预报方法也由经验为主转变为强调物理过程。用于揭示强对流天气现象及用于强对流分析预报的对流参数发展迅速，参数估计逐渐成为强天气潜势预报的重要方法之一。</p>
+<p>对流参数反映了对流天气发生发展的环境条件特征。一些参数对对流性天气有普适意义，一些参数则是强对流天气参数。不同的参数代表的物理意义不同，使用前必须清楚每个参数的物理意义、适用条件、不确定性、局限性等。下面我们队选取常用的一些参数做详细介绍。</p>
 <div class="section" id="id2">
-<h2>热力稳定度指数<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>热力稳定度指数（普遍性的参数）<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>热力稳定度分析是对流天气诊断和分析最常用的方法。在天气分析预报业务中，常常用一些指数表示大气的稳定度，称为稳定度指数。应用稳定度指数时要注意符号问题，使用指数前要弄清楚正值代表了稳定还是不稳定。不稳定包括热力不稳定和动力不稳定，本节介绍热力稳定度参数。</p>
 <div class="section" id="id3">
 <h3>条件性稳定度指数<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>条件性不稳定是一种潜在不稳定。一般情况下，条件性不稳定并不立即表现出来，只有当起始高度上有较强的抬升力或冲击力，足以将气块抬升到自由对流高度（LFC）以上时，对流运动才能发展，不稳定才表现出来。触发机制包括局地的热对流或动力因子，一般造成局地性的对流天气。</p>
+<p>判断某站点的大气是否就有条件不稳定，通常是在起始高度上选取一气块，假设其按照绝热抬升（一般先经历干绝热过程，然后经历湿绝热过程）至一定高度（高于自由对流高度），当气块温度（T’）比周围空气温度（Te）高时，称为不稳定；反之称为稳定。</p>
+<p>常用的条件稳定度指数包括沙氏指数和抬升指数。</p>
 <div class="section" id="si">
 <h4>沙氏指数Si<a class="headerlink" href="#si" title="永久链接至标题">¶</a></h4>
+<p>沙氏指数定义为850hPa等压面上的未饱和湿空气沿干绝热线抬升，达到抬升凝结高度再沿湿绝热上升到500hPa时具有的气块温度（T’）与500hPa等压面上的环境温度（Te500）的差值，即</p>
+<div class="math notranslate nohighlight">
+\[SI = T_{e500} - T'\]</div>
+<p>SI &lt; 0 表示大气层结不稳定，且负值越大，不稳定度越大；反之表示气层是稳定的。</p>
+<p>国外的分析表明，SI与对流性天气有以下关系：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>SI&gt;3℃</td>
+<td>发生雷暴的可能性很小或没有</td>
+</tr>
+<tr class="row-even"><td>0℃&lt;SI&lt;3℃</td>
+<td>有发生阵雨的可能性</td>
+</tr>
+<tr class="row-odd"><td>-3℃&lt;SI&lt;0℃</td>
+<td>有发生雷暴的可能性</td>
+</tr>
+<tr class="row-even"><td>-6℃&lt;SI&lt;-3℃</td>
+<td>有发生强雷暴的可能性</td>
+</tr>
+<tr class="row-odd"><td>SI&lt;-6℃</td>
+<td>有发生严重对流天气的危险</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<ol class="last arabic simple">
+<li>在使用SI指数时，用到的起始高度为850hPa、上层为500hPa，一般情况下，500hPa在自由对流高度之上。上下层高度固定具有局限性，因为气块的真实抬升高度不一定在850hPa</li>
+<li>对于海拔较高的地区，如青藏高原，850hPa在地下。因此，这些台站不能直接用SI指数，而是应该在低层、高层分别取两个等压面代替850hPa和500hPa</li>
+<li>如果850hPa和500hPa之间存在锋面或者逆温层，SI指数大于0，无意义</li>
+<li>对于我国而言，SI与对流性天气的关系所用到的阈值与国外有较明显的区别，有必要针对不同季节，根据当地实际情况确定。</li>
+</ol>
+</div>
 </div>
 <div class="section" id="li">
 <h4>抬升指数Li<a class="headerlink" href="#li" title="永久链接至标题">¶</a></h4>
+<p>抬升指数定义为平均气块根据修正后的露点和温度自地面沿干绝热线上升，达到凝结高度后再沿湿绝热上升到500hPa时所具有的温度（T’）与500hPa等压面上的环境温度（Te500）的差值，即</p>
+<div class="math notranslate nohighlight">
+\[LI = T_{e500} - T'\]</div>
+<p>LI &lt; 0 表示大气层结不稳定，且负值越大，越不稳定；反之，若LI&gt;0,表示大气层结是稳定的。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">LI指数与SI指数的差别只是抬升的起始高度不一样</p>
+</div>
 </div>
 </div>
 <div class="section" id="id4">
 <h3>对流性稳定度参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>前面在讨论条件性稳定度时，仅仅考虑一小块空气上升或下沉，其周围的空气没有发生变化。而在实际大气中，常常会遇到气流过山、空气沿着锋面爬升等厚度相当大的某一层空气一起抬升的情况。这就涉及到对流性稳定度问题。对流性不稳定也是一种潜在性不稳定。下面介绍集中对流稳定性指数。</p>
+<p>首先回顾下假相当位温的概念，假相当位温是湿空气通过假绝热过程将水汽全部凝结降落后所具有的位温。在T-InP图上可以这样表示：未饱和湿空气块先沿着干绝热线上升至抬升凝结高度LCL，然后沿着湿绝热线上升直到气块内水汽全部凝结（即湿绝热线与干绝热线几乎平行），再按干绝热下沉到1000hPa处，此时气块所具有的温度称为该气块的假相当位温，通常以 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 表示。假相当位温不仅考虑了气压对温度的影响，也考虑了水汽的凝结和蒸发对温度的影响。它实际上是把温度、气压、湿度包括在一起的一个综合物理量。对于干绝热、湿绝热、假绝热过程，同一气块的 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 值保守不变， <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 的这一特性常被用来鉴别气团，因为气团在移动中，其 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 值等于常数。</p>
 <div class="section" id="ic">
 <h4>对流性稳定度指数IC<a class="headerlink" href="#ic" title="永久链接至标题">¶</a></h4>
+<p>当厚度相当大的某一气层被抬升且达到饱和时，都会变得不稳定么？不一定，这取决于上下层 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 的差值。根据对流性不稳定度判据，只有当 <span class="math notranslate nohighlight">\(\frac{\partial \theta_{se}}{\partial z}&lt;0\)</span> 时，气层才是对流性不稳定的。因此，当上层 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 大于下层 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 时，抬升前都是稳定的，抬升至饱和后仍是稳定的。因此，通常取上下层 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 的差值作为对流性稳定度指数。</p>
+<div class="math notranslate nohighlight">
+\[IC = \theta_{se上} -  \theta_{se下}\]</div>
+<p>IC &gt; 0为对流性稳定，IC &lt; 0为对流性不稳定。</p>
+<p>计算IC时，层次的选定并不唯一。如在探讨IC与暴雨的关系时，有人认为 <span class="math notranslate nohighlight">\(\theta_{se500} -  \theta_{se850}\)</span> 与暴雨的关系密切，也有人认为 <span class="math notranslate nohighlight">\(\theta_{se700} -  \theta_{se850}\)</span> 与暴雨关系较好。</p>
 </div>
 <div class="section" id="bic">
 <h4>最大对流稳定度指数BIC<a class="headerlink" href="#bic" title="永久链接至标题">¶</a></h4>
+<p>经验表明，利用产生强对流天气的临（邻）近探空资料计算的 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 常常出现下图所示的廓线形式，即在边界层的附近，往往有一个 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 的极大值（ <span class="math notranslate nohighlight">\(\theta_{semax}\)</span> ），在对流层中往往有一个 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 的极小值（ <span class="math notranslate nohighlight">\(\theta_{semin}\)</span> ）。最大对流稳定度指数定义为</p>
+<div class="math notranslate nohighlight">
+\[BIC = \theta_{semax} - \theta_{semin}\]</div>
+<p>一般认为，与选取固定层次间 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 差值计算的对流稳定度指数IC相比，最大对流稳定度指数BIC更为客观。</p>
+<p>在强对流降水活动中，假相当位温的最大和最小值之差往往会高于某一临界值，即 <span class="math notranslate nohighlight">\(\theta_{semax} - \theta_{semin} \geq \theta_{sec}\)</span> ，而这个临界值因时因地因天气形势而变。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">仅仅用标准层资料计算的BIC缺乏代表性</p>
+</div>
 </div>
 </div>
 <div class="section" id="id5">
 <h3>其他热力稳定度指数<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <div class="section" id="k">
 <h4>K指数<a class="headerlink" href="#k" title="永久链接至标题">¶</a></h4>
+<p>K指数定义为</p>
+<div class="math notranslate nohighlight">
+\[K = (T_{850} - T_{500}) + T_{d850} - (T-T_d)_{700}\]</div>
+<p>其中，<span class="math notranslate nohighlight">\(T\)</span> 和 <span class="math notranslate nohighlight">\(T_d\)</span> 分别表示露点和温度：下标850、700、500表示850hPa、700hPa、500hPa。</p>
+<p>K指数的第一项表示温度直减率，第二项表示低层水汽条件，第三项表示中层饱和程度。所以K指数能够反映大气的层结稳定情况，K指数越大，层结越不稳定。如前面已经提到过，高层高冷、低层暖湿的环境有利于强风暴的发生发展，这在K指数计算公式的各项中反映如下：当高层冷、低层暖湿，则第一项大；当中低层湿度大是，则第二项大，第三项小，在取负号后大，因此整个K值大。</p>
+<p>K指数可以配合散度、涡度分析制作雷暴的客观预报。K值大小与可能出现的雷暴活动关系如下表</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>K&lt;20℃</td>
+<td>无雷暴</td>
+</tr>
+<tr class="row-even"><td>20℃&lt;K&lt;25℃</td>
+<td>孤立雷暴</td>
+</tr>
+<tr class="row-odd"><td>25℃&lt;K&lt;30℃</td>
+<td>零星雷暴</td>
+</tr>
+<tr class="row-even"><td>30℃&lt;K&lt;35℃</td>
+<td>分散雷暴</td>
+</tr>
+<tr class="row-odd"><td>K&gt;35℃</td>
+<td>成片雷暴</td>
+</tr>
+</tbody>
+</table>
+<p>K值所指示的不稳定区域中，常受气流辐合、辐散的影响。在辐合区中，雷暴活动加强，在辐散区中，雷暴活动减弱。</p>
+<p>K指数不能明显的表示出整个大气的层结不稳定程度。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">使用K指数时，应理解参数表示的物理含义，而不能单纯关注数值大小，这也是使用其它指数应当注意的问题。K指数由三项组成，分别代表了温度直减率、低层水汽条件和中层饱和度。在南方，尤其是夏季，由于水汽条件好，K值经常在35以上，但是对流却不总是发生。而在北方，有时候在冷涡背景下，中层有冷空气，K小于30，但仍可能发生对流（伴随雷暴大风）。可见，应注意季节、地域、对流类型的差异。</p>
+</div>
 </div>
 <div class="section" id="tt">
 <h4>总指数TT<a class="headerlink" href="#tt" title="永久链接至标题">¶</a></h4>
+<p>总指数是Miller(1972)引入的，它是由 <span class="math notranslate nohighlight">\(vertical total = T_{850} - T_{500}\)</span> (K指数中第一项，反映垂直温度递减率)和 <span class="math notranslate nohighlight">\(cross total = T_{d850} - T_{500}\)</span> （反映低层水汽条件）两个指数之和，因此成为总指数。其表示为，</p>
+<div class="math notranslate nohighlight">
+\[TT = T_{850} + T_{d850} - 2T_{500}\]</div>
+<p>TT越大，越容易发生对流天气，预报阈值因时因地而异。Bucrocq给出的阈值大于57℃。</p>
 </div>
 </div>
 </div>
 <div class="section" id="id6">
 <h2>能量参数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>为了讨论外力（动力或热力）冲击的气块，在较厚的气层中做垂直运动时，运动能否发展，就要考虑较厚气层从底部上升的气块可能产生的总的影响，因此提出了不稳定能量的概念，以便判断整个气层的稳定度问题，并讨论不稳定能量与对流的关系。</p>
 <div class="section" id="id7">
 <h3>有效能力参数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>大气对流是有效能量之间的相互转换和释放，对流有效位能从理论上反映出对流上升运动可能发展的最大程度，近年来有广泛的应用。而下城对流有效位能反映出与下沉对流运动相关的几个热力过程对下沉对流运动理论上的最大贡献。分析、预报对流性天气时，有必要理解和诊断有效能量。</p>
 <div class="section" id="cape">
 <h4>对流有效位能CAPE<a class="headerlink" href="#cape" title="永久链接至标题">¶</a></h4>
+<p>所谓对流有效位能（available potential energy）是指有可能转化为动能的位能。气块在不稳定气层中（浮力大于重力）做垂直运动时，垂直速度不断增加，即气块的运动动能不断增加，气块所增加的这部分动能是由不稳定大气中储存的一部分能量转换而来的，我们把这部分可以转换为气块运动动能的能量叫做对流有效位能（CAPE）。</p>
+<p>Doswell和Ramussen(1994)指出，在发生深厚湿对流的环境里，CAPE是与环境联系最密切的热力学变量。随着探空资料和模式输出探空资料应用的增多，以及CAPE程序的普及，CAPE已经成为强对流天气分析预报的一个常用参数。</p>
+<p>CAPE可以用单位质量的上升气块在重力和浮力的合力作用下所做的功来度量，公式如下</p>
+<div class="math notranslate nohighlight">
+\[CAPE = g \int_{Z_{LFC}}^{Z_{EL}}(\frac{T_{vp} - T_{ve}}{T_{ve}})dz\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(T_v\)</span> 是虚温，e、p分别表示环境与气块有关的物理量， <span class="math notranslate nohighlight">\(Z_{LFC}\)</span> 为自由对流高度， <span class="math notranslate nohighlight">\(Z_{EL}\)</span> 为平衡高度。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">Doswell和Rasmussen(1994)指出，如果计算CAPE时不用虚温订正（即不考虑虚温订正量，直接用温度），对于大的CAPE不会导致较大误差，但是对于小的CAPE产生的相对误差较大。</p>
+</div>
+<p>在等压面坐标下，可改写为</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}CAPE &amp;= \int_{P_{EL}}^{P_{LFC}} R_d（T_{vp} - T_{ve}）dIn p \\
+     &amp;= R_d[\int_{P_{LFC}}^{P_{EL}} T_v d(-In p) - \int_{P_{LFC}}^{P_{EL}} T_{ve} d(-In p)] \\
+     &amp;= R_d(S_1 - S_2)\end{split}\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(P_{LFC}\)</span> 为自由对流高度， <span class="math notranslate nohighlight">\(P_{EL}\)</span> 为平衡高度。 <span class="math notranslate nohighlight">\((S_1-S_2)\)</span> 是T-InP图上的正面积。</p>
+<p>在T-InP图上， <span class="math notranslate nohighlight">\((S_1-S_2)\)</span> 表示自由对流高度LFC到平衡高度EL间的层结曲线与状态曲线所围成的面积（称为正面积）。因此，弱忽略摩擦效应和冻结过程等造成的潜热释放，则CAPE正比于热力学图解上的正面积。CAPE是大气不稳定程度的度量。对流必须满足CAPE为正，CAPE的数值的增大表示上升速度的加强及对流的发展。</p>
+<p>按照CAPE的定义， <span class="math notranslate nohighlight">\(CAPE = \frac{1}{2} (W_{EL}^2 - W_{LFC}^2)\)</span> ,其中 <span class="math notranslate nohighlight">\(W_{LFC}\)</span> 和 <span class="math notranslate nohighlight">\(W_{EL}\)</span> 分别表示自由对流高度和平衡高度处的气流速度。所以根据CAPE值，可以估算气块达到平衡高度EL时的最大垂直速度 <span class="math notranslate nohighlight">\(W_{EL}\)</span> 。假设 <span class="math notranslate nohighlight">\(W_{LFC} = 0\)</span> ，CAPE和 <span class="math notranslate nohighlight">\(W_{EL}\)</span> 的关系为</p>
+<div class="math notranslate nohighlight">
+\[W_{EL} = \sqrt{2CAPE}\]</div>
+<p>对于对流中的上升速度，有以下几点说明</p>
+<ol class="arabic simple">
+<li>CAPE是一种潜在能量，反映的只是对流潜势，它只能是有可能转换为对流上升运动动能的一种能量，并不一定可以转换为上升运动</li>
+<li>计算CAPE时包含了很多假定和近似，因此计算出的对流上升运动容易偏大，实际大气的值可能会小很多</li>
+<li>大多数无组织风暴中上升气流的垂直速度通常是 <span class="math notranslate nohighlight">\(W_{max}\)</span> 的1/2左右，这是因为风暴中水负载和混合作用的限制</li>
+<li>结构完整的风暴，尤其是超级单体风暴中，上升气流核的垂直速度接近于 <span class="math notranslate nohighlight">\(W_{max}\)</span> ，这是因为这类风暴不受环境大气的夹卷影响</li>
+<li>非强风暴中的上升速度通常只有 10m/s，而强风暴上升速度通常超过30m/s</li>
+</ol>
+<p>CAPE比普通的不稳定指数更能反映大气的整体垂直结构特征，但是对流有效位能的计算非常敏感，如地形高度不同、下界面不同、起始高度的气块温度和环境温度的统计出入，都将造成CAPE计算的出入。通常计算和使用CAPE时需要注意以下几个问题：</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>与上升气块起始高度的关系</dt>
+<dd>在相同的层结下，如果上升气块的起始高度不同，其状态曲线将不同，计算的CAPE大小也就不同，一般选取地面或逆温层顶为起始抬升高度。在我国，以北京时08时探空资料计算CAPE时，由于夜晚近地面的辐合降温作用，以地面为抬升点计算的CAPE经常很小或者没有，但是如果以低层逆温层顶（或最不稳定点）计算CAPE的值可能很大。但是必须注意，考虑对流是否发展时，还要考虑冲击力出现的高度。例如，当地面有逆温层时，如果只是地面空气受到向上的冲击作用，一般不会造成强烈的对流，而如果逆温层顶部的空气受到向上的冲击作用，就可能造成强烈的对流。</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>与湿度情况的关系</dt>
+<dd>CAPE的大小与空气湿度有关，湿度越大，越有利于对流发展。在相同的层结下，如果上升气块的湿度较大，则凝结高度较低，自由对流高度也较低，CAPE值大，并且正面积大于负面积，属于真潜在不稳定。如果湿度较小，凝结高度较高，自由对流高度也较高，CAPE值小，此时正面积小于负面积，属于假潜在不稳定。如果湿度非常小，凝结高度更高，CAPE为零，此时只有负面积，没有正面积，属于绝对稳定型。</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>与纵横比的关系</dt>
+<dd>为了直观，人们往往借助热力学图解上的正面积的大小直接说明不稳定能量的大小。然而，即使CAPE值不变，如果自由对流层厚度（自由对流高度LFC到平衡高度EL间的厚度）增大（减小），则整个对流层的平均浮力必然减小（增大）。CAPE相同而纵横比不同的探空，其稳定度可能出现较大的不同。一般而言，矮胖的CAPE比瘦高的CAPE，更有利于出现强对流。</dd>
+</dl>
+</li>
+</ol>
 </div>
 <div class="section" id="dcape">
 <h4>下沉对流有效位能DCAPE<a class="headerlink" href="#dcape" title="永久链接至标题">¶</a></h4>
+<p>强的局地风暴，如多单体风暴、超级单体风暴，持续较长时间的重要条件之一是具有常定的上升气流和下沉气流。对流发展到一定阶段后，下沉运动开始产生，到风暴成熟阶段，上升和下沉运动都得到充分发展，此后，下沉运动称为对流主体，对流逐渐减弱直至对流结束。</p>
+<p>有关强局地风暴上升运动的研究较多，也比较透彻，而下沉运动的情况以及它的起因比上升运动复杂，研究相对较少。近年来，随着局地强风暴探测手段即数值模拟技术的改进，带动了对局地强风暴中下沉气流的关注。</p>
+<p>对流中下沉运动的原因是外界干冷空气被吸入对流云体，并被云内降落的水和冰粒子拖曳下泄，由于水和冰的蒸发和融化而使气块降温，并低于环境温度，产生向下的浮力，从而使下沉加速。下沉对流有效位能从理论上反映了对流云体中下沉气流达到地面时可能有的最大动能（下击暴流的强度），即环境负浮力对气块做功所产生的动能。</p>
+<p>下沉对流有效位能DCAPE的表达式为</p>
+<div class="math notranslate nohighlight">
+\[DCAPE = \int_{p_i}^{p_n} R_d (T_{\rho e} - T_{\rho p}) d In p\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(T_{rh}\)</span> 表示密度温度，下标e和p分别表示与周围环境和气块相关的物理量， <span class="math notranslate nohighlight">\(p_i\)</span> 表示气块起始下沉处的气压， <span class="math notranslate nohighlight">\(p_n\)</span> 表示气块到达中性浮力层或地面时的气压</p>
+<p>在T-InP图中，DCAPE与线段AB、BC、CD与层结曲线AD所围成面积成正比（下图）。把中层干冷空气的侵入点作为气块下沉的起始高度。下沉起始温度以大气在下沉七点的温度经等焓蒸发至饱和时所具有的温度作为大气开始下沉的温度。大气沿湿绝热线下沉至大气底部，这条湿绝热线与大气层结曲线所围成的，点击所表示的能量为下沉对流有效位能。利用实际探空判断下沉起点时，可把中层大气中相当位温最小的点作为下沉起始高度，把该高度处的露点温度作为下沉起始温度。</p>
+<p>假设不考虑其它因素，若下沉起始高度的垂直速度为零，则气块下沉至中性浮力层或地面时，理论上负浮力做功引起的下沉对流速度为</p>
+<div class="math notranslate nohighlight">
+\[-w_{max} = \sqrt{2 DCAPE}\]</div>
+<p>自Emanuel(1994)引入DCAPE后，DCAPE已被广泛用于强风暴的分析和研究，有几点值得注意，
+1. 下沉起始高度的取法，一般将其取为700~400hPa间 <span class="math notranslate nohighlight">\(\theta_w\)</span> 或 <span class="math notranslate nohighlight">\(\theta_{se}\)</span> 最小处或600hPa处。
+2. DCAPE与CAPE的产生过程有重要的差别。CAPE产生于上升凝结过程，可精确把该过程看做一个平衡过程，小云滴和水汽具有同样温度。而充满降水雨滴的下沉气流，由于雨滴相对较大，对空气而言，它具有明显的下沉速度，雨滴的温度不一定等于气块温度，下沉蒸发过程是一种非平衡过程，但一般仍处理为平衡过程
+3. 与CAPE相比，DCAPE的理解和计算过程更为复杂
+4. 很多情况下，水物质的蒸发并非能够一直使得下沉气流恰好保持饱和状态，因此与上升过程相比，气块沿着假相当位温线（湿绝热线）下沉的可能性很小
+5. 当CAPE小于某一临界值时（该临界值需进一步通过实验确定） ，将不计算DCAPE或认为DCAPE为零，如果CAPE较小，没有降水时，不可能有DCAPE所描述的下沉对流运动发生</p>
 </div>
 </div>
 <div class="section" id="id8">
 <h3>与不稳定能量储存相关的参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>强对流的发生与发展过程是大量能量累积、发展与释放的过程。强对流风暴的发展需要释放巨大能量，对流能量的积聚也是强对流风暴发生的前提条件。干暖盖指数和对流抑制能量反映了大气稳定结构对于对流运动的抑制强度，一旦这种抑制被突破，对流运动即可得到较为充分的发展。</p>
 <div class="section" id="ls">
 <h4>干暖盖强度指数Ls<a class="headerlink" href="#ls" title="永久链接至标题">¶</a></h4>
+<p>在强对流爆发前，中低层常有逆温层，它一般具有干、暖特性，故常常称为“干暖盖”。它相当于一个阻挡层，暂时把低空湿层与对流层上部的干层分开，阻碍对流的发展。</p>
+<p>干暖盖一方面抑制对流，另一方面也是对大气低层不稳定能量进行储存和积累，这种作用使得不稳定能量不至于零散释放，而是集中在具有强大触发机制的地区释放，造成强烈的对流天气。因此，在分析、预报强对流天气时，应当注意中低层是否有干暖盖。</p>
+<p>干暖盖的相对强度可用指数Ls表示，</p>
+<div class="math notranslate nohighlight">
+\[Ls = (\theta_w^*)_{max} - \bar{\theta}_w\]</div>
+<p>其中， <span class="math notranslate nohighlight">\((\theta_w^*)_{max}\)</span> 表示逆温层顶处的最大饱和湿球位温， <span class="math notranslate nohighlight">\(\bar{\theta}_w\)</span> 表示靠近地面50hPa气层中的湿球位温的平均值。Ls越大，表示干暖盖越强。</p>
 </div>
 <div class="section" id="cin">
 <h4>对流抑制能量CIN<a class="headerlink" href="#cin" title="永久链接至标题">¶</a></h4>
+<p>对流抑制能量（Convective Inhibition, CIN）是反映对流发生之前与能量储存相关的参数，即不稳定能量的储存机制，对流抑制能量的定义为当平均大气边界层气块通过稳定层达到自由对流高度LFC所做的负功，公式表示为，</p>
+<div class="math notranslate nohighlight">
+\[CIN = -\int_{P_{LFC}}^{P_{i}} R_d (T_{vp} - T_{ve}) d In p\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(T_{ve}, T_{vp}\)</span> 分别表示环境和气块的虚温， <span class="math notranslate nohighlight">\(p_i\)</span> 表示气块起始抬升高度， <span class="math notranslate nohighlight">\(P_{LFC}\)</span> 为自由对流高度，CIN是气块获得对流必须超越的能量临界值。</p>
+<p>T-InP图上，将气块抬升到LFC位置通常需要对气块做功，而功的大小与气块起始抬升高度到LFC之间的状态曲线与层结曲线所围成的面积成正比，这块面积被称为负面积，即对流抑制能量CIN。</p>
+<p>CIN的物理意义为：处于低层的气块能否产生对流，取决于它能否从其他途径获得克服CIN所表示的能量，这是对流发生的先决条件。由于发生强对流的情况，通常是CIN有一较合适的值，CIN太大，抑制对流程度大，对流不容易发生；CIN太小，不稳定能量不容易在低层积聚，不太强的对流很容易发生，从而使对流不能发展到较强的程度。</p>
 </div>
 </div>
 </div>
 <div class="section" id="id9">
 <h2>大气热力-动力参数结合的组合参数<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>对流能否发展为强风暴，一方面取决于稳定度状况，另一方面取决于环境的动力条件。热力和动力参数从不同侧面反映出天气发生的环境。在应用时，常常把大气热力（稳定度或能量）参数和风垂直切变等动力参数结合起来组成一些具有天气动力学意义的新参数。如理查森数是把静力稳定度和动力条件相结合判断大气综合稳定度状况的一个传统指标，而粗理查森数和能量螺旋度等将对流能量和动力参数相结合，从不同侧面反映了强对流发生的环境特征和条件。</p>
 <div class="section" id="ri">
 <h3>理查森数Ri<a class="headerlink" href="#ri" title="永久链接至标题">¶</a></h3>
+<p>在大气湍流理论中，理查森数（Richardson number, Ri）是一个重要的参数。Ri最初是为了寻找大气湍流发展与否引入的，现在已经用于区分各种尺度扰动系统是否稳定以及暴雨的落区预报中。它表示静力稳定度和风速垂直切变之间的关系，实际上反映了有效位能与有效动能之间的关系，层结越不稳定，垂直切变越大，越有利于湍流发展。</p>
+<p>Ri是无量纲数，其表达式为，</p>
+<div class="math notranslate nohighlight">
+\[Ri = \frac{\frac{g}{\bar{\theta}} \frac{\partial \theta}{\partial z}}{\Big(\frac{\partial u}{\partial z}\Big)^2 + \Big(\frac{\partial v}{\partial z}\Big)^2} \approx \frac{g}{\bar{\theta}} \frac{\Delta \theta_z \cdot \Delta z}{(\Delta u)_z^2+(\Delta v)_z^2}\]</div>
+<p>其中， <span class="math notranslate nohighlight">\(\bar{\theta}\)</span> 是两个高度上（如850hPa和500hPa）位温的平均值， <span class="math notranslate nohighlight">\(\Delta \theta_z\)</span> 是两个高度上位温的差值。 <span class="math notranslate nohighlight">\(\Delta u, \Delta v\)</span> 分别是两个高度上纬向风和经向风的风速差。</p>
+<p>Ri可正可负，Fritschi曾经分析了Ri与天气的关系，发现Ri对强对流天气有很好的指示性，判据如下，</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="56%" />
+<col width="44%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><span class="math notranslate nohighlight">\(0.25 \geq R_i \geq -1\)</span></td>
+<td>易发生中纬度系统性对流</td>
+</tr>
+<tr class="row-even"><td><span class="math notranslate nohighlight">\(R_i &lt; -1\)</span></td>
+<td>易发生气团性雷暴</td>
+</tr>
+<tr class="row-odd"><td><span class="math notranslate nohighlight">\(R_i &lt; -2\)</span></td>
+<td>易发生热带性积雨云</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="brn">
 <h3>粗理查森数BRN<a class="headerlink" href="#brn" title="永久链接至标题">¶</a></h3>
+<p>强对流天气可以发生在弱的垂直风切变与强的静力不稳定环境或相反的环境中。可见，要形成生命期较长的对流风暴，控制风暴结构和发展的因子（热力能量和运动能量）之间存在着某种平衡关系。粗理查森数（Bulk Richardson Number, BRN）可以很好地反映这种平衡关系，它利用对流有效位能CAPE与垂直风切变SHEAR之比表示，其数学表达式为，</p>
+<div class="math notranslate nohighlight">
+\[BRN = \frac{CAPE}{\frac{1}{2}(u^2+v^2)} = \frac{CAPE}{\frac{1}{2}(Shr^2)}\]</div>
+<p>CAPE为对流有效位能，Shr为对流层中层对对流层低层之间的风矢切变的平方，它既代表了供给风暴的近地层入流，也代表了上升气流产生旋转的能力。</p>
+<p>BRN总是正值，在实际计算时，Shr为低层0-6km的密度加权平均风与0-500m近地层平均风之间的风速差，</p>
+<div class="math notranslate nohighlight">
+\[Shr = \Big{\frac{\int_{0}^{6km} \rho(z) \|V(z)dz\| }{\int_{0}^{6km} \rho(z) dz} - \frac{1}{2} \|V(0) + V(0.5km)\| \Big}\]</div>
+<p>由于CAPE反映了上升气流的强度，而SHEAR决定风暴的特征。因此，BRN可以描述风暴类型、垂直风切变与浮力之间的关系。多单体风暴易于发生在风速切变大，但是低层风向切变弱的情况下，脉冲风暴在CAPE大而切变小的情况下，中等强度的超级单体往往发生在 5&lt;=BRN&lt;=50 的情况下，而多单体风暴一般发生在 BRN&gt;35 的情况下。可见，BRN的大小要适中。</p>
+<p>BRN与强对流天气的关系如下，杨国祥、何齐强（1994）的研究表明，在出现雷暴大风、冰雹的情况下，BRN往往较小，若取Shr为0-10km密度加权平均风和0-600m近地面层风之间的差值，则可将BRN&lt;=40作为预报雷暴大风、冰雹的临界值，说明雷暴大风、冰雹主要出现在超级单体或强多单体风暴中。但是在弱对流性不稳定的情况下，BRN并非是一个好的预报指标，因为这时的BRN值可以较小。</p>
+<p>使用BRN时需要注意以下事项：</p>
+<ol class="arabic simple">
+<li>当CAPE和SHEAR都很小时，不能用该指数。CAPE至少500J/kg，风切变至少10m/s</li>
+<li>当BRN相同时，CAPE和SHEAR有很多组合方式，因此，还需分别检验CAPE和SHEAR的大小</li>
+<li>BRN指数不能反映水汽、逆温、风向的切变、急流和抬升等信息，因此需同时考察这些参数</li>
+</ol>
 </div>
 <div class="section" id="srh">
 <h3>风暴相对螺旋度SRH<a class="headerlink" href="#srh" title="永久链接至标题">¶</a></h3>
+<p>从运动学观点来看，旋转的流体有利于能量的维持，对系统发展及生命维持起了积极的作用，在对流层低层几公里以内，相对于风暴的风向随高度顺转是风暴旋转发展的关键因子。Davies-Jone指出一条经验规则，即地面至高空3公里范围内相对于风暴的风速大于10m/s、风向随高度顺转角度大于90°是形成强对流风暴的有利条件。风暴相对螺旋度（Storm-Relative Helicity, 也称总螺旋度）反映了一定气层厚度内（一般指3km）内环境风场旋转程度的大小和输入到对流风暴体内的环境涡度的大小。</p>
+<p>下面介绍螺旋度（Helicity）的概念，螺旋度反映了流体沿着旋转方向运动的强弱，很多研究表明，螺旋度对雷暴、龙卷、大范围暴雨等的分析预报有一定指示作用。</p>
+<p>根据Moffert(1978)的定义，螺旋度为风速矢与相对涡度点乘的体积分，表示为，</p>
+<div class="math notranslate nohighlight">
+\[H_T = \iiint_{\tau} \vec{V} \cdot \nabla \times \vec{V} d\tau\]</div>
+<p>而风速矢和涡度矢的点乘称为局地螺旋度（又称螺旋度密度），表示为，</p>
+<div class="math notranslate nohighlight">
+\[H_D = \vec{V} \cdot \nabla \times \vec{V}\]</div>
+<p>上两式中的 <span class="math notranslate nohighlight">\(\vec{V}\)</span> 为三维风速， <span class="math notranslate nohighlight">\(\nabla \times \vec{V}\)</span> 为三维涡度矢量</p>
+<p>后来，Brandes于1989年提出了“风暴相对螺旋度”的概念，认为相对于风暴的螺旋度才是更有实际意义的量，其表达式为，</p>
+<div class="math notranslate nohighlight">
+\[H_{s-r-T} = \int_{0}^{h} (\vec{V} - \vec{C}) \cdot \vec{\omega} dz\]</div>
+<p>上式中， <span class="math notranslate nohighlight">\(\vec{C}\)</span> 是风暴的移速， <span class="math notranslate nohighlight">\(\vec{V} - \vec{C}\)</span> 是风暴相对气流， <span class="math notranslate nohighlight">\(\vec{\omega}=\nabla \times \vec{V}\)</span>  为三维涡度矢量，h是风暴入流气层的厚度，通常取为3km。风暴相对螺旋度单位为 <span class="math notranslate nohighlight">\(m^2 \cdot s^{-2}\)</span> 。</p>
+<p>风暴相对螺旋度可以用来估算垂直风切变环境中风暴运动所产生的旋转潜势，也就是说，气流入流层上沿流线方向的涡度可以进入并与上升气流核作用，在风暴相当深的层次中产生强大持久的旋转，当沿着流线方向的强涡度与低层强相对风暴气流相结合（方向一致）时，相对风暴螺旋度或旋转潜势尤其大。</p>
+<p>局地风暴相对螺旋度为，</p>
+<div class="math notranslate nohighlight">
+\[H_{s-r-D} = (\vec{V} - \vec{C}) \cdot \vec{\omega}\]</div>
+<p>表示某一高度的单位厚度气层内总螺旋度的大小，单位是 m s-2。</p>
+<p>平均风暴相对螺旋度是对总螺旋度求高度平均，单位是 m s-2，表达式为，</p>
+<div class="math notranslate nohighlight">
+\[H_{s-r-M} = \frac{1}{h} \int_{0}^{h} (\vec{V} - \vec{C}) \cdot \vec{\omega} dz\]</div>
+<p>局地直角坐标系中，各项可表示为，</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\vec{V} - \vec{C} = u_{sr} \vec{i} + v_{sr} \vec{j} + w_{sr} \vec{k} = (u-c_{x}) \vec{i} + (v-c_{y}) \vec{j} + (w-c_{z}) \vec{k}\\\vec{\omega} = \nabla \times \vec{V} = (\xi \vec{i} + \eta \vec{j} + \zeta \vec{k})\end{aligned}\end{align} \]</div>
+<p>其中， <span class="math notranslate nohighlight">\(\xi=\Big(\frac{\partial w}{\partial y} - \frac{\partial v}{\partial z}\Big), \eta=\Big(\frac{\partial u}{\partial z} - \frac{\partial w}{\partial x}\Big) , \zeta=\Big(\frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}\Big)\)</span></p>
+<p>对于强对流天气，相对于水平涡度分量，垂直涡度分量（ <span class="math notranslate nohighlight">\(\zeta\)</span> ）可以忽略，同时，强对流发生前，与水平风的垂直切变相比，垂直速度在水平方向变化（ <span class="math notranslate nohighlight">\(\frac{\partial w}{\partial x}, \frac{\partial w}{\partial y}\)</span> ）不大。因而，局地风暴相对螺旋度可以改写为，</p>
+<div class="math notranslate nohighlight">
+\[H_{s-r-D} = v_{sr} \frac{\partial u}{\partial z} - u{sr} \frac{\partial v}{\partial z}\]</div>
+<p>将总螺旋度写为差分求和形式，</p>
+<div class="math notranslate nohighlight">
+\[H_{s-r-T} = \sum_{k=1}^{N-1} [(v_k - c_y)(u_{k+1} - u_k) - (u_k - c_x)(v_{k+1} - v_k)]\]</div>
+<p>其中k表示自下而上的分层序号，k=1,2,…,N-1,N，共N个层面，经过整理，上式也可写为，</p>
+<div class="math notranslate nohighlight">
+\[H_{s-r-T} = \sum_{k=1}^{N-1} [(u_{k+1} - c_x)(v_k - c_y) - (u_k - c_x)(v_{k+1} - c_y)]\]</div>
+<p>风暴相对螺旋度的几何意义为，它与速度矢图中两个层次之间的风暴相对矢量所扫过的区域成正比，如下图，通常情况下，两个层次是指地面和可观察到风暴入流的顶部即LFC高度，实际应用时，气流的入流层大约是指0-2km和0-3km间的层次。</p>
+<p>计算风暴相对螺旋度时，主要遇到的问题和不确定性有以下三个方面，</p>
+<ol class="arabic simple">
+<li>资料问题，风场资料可由雷达资料导出，也可以利用探空资料，但是其时间间隔为12小时，对于强风暴的生命史来说，间隔太长，可以采用风廓线仪，数值预报资料等对风廓线进行订正</li>
+<li>积分上下限取法，一般取为0-3km，也有的去1-4km</li>
+<li>风暴移速的确定（风暴运动），准确的预报风暴运动是不大可能的</li>
+</ol>
+<p>在实际计算中，风暴速度可以这样确定，选取850hPa到400hPa气层中的质量加权平均风，风向向右偏转30°，风速大小的75%作为该点的风暴速度近似。Davies-Jone等人的实验结果表明，对于弱龙卷、中等强度龙卷和强龙卷，其螺旋度大小分别为150-299 m2s-2，300-499 m2s-2和大雨450 m2s-2 （h=3km）。当SRH&gt;120 m2s-2
+时发生强对流的可能性极大。</p>
 </div>
 <div class="section" id="ehi">
 <h3>能量-螺旋度指数EHI<a class="headerlink" href="#ehi" title="永久链接至标题">¶</a></h3>
+<p>John等（1990）通过收集多个个例，研究强对流风暴环境场的特征参数，他们发现风暴发生在对流有效位能CAPE数值跨度很大（200-5300 J/kg）的环境中。CAPE数值的这种分布与季节有关。在冷的月份，有利于风暴发展的风场环境很常见，但该季节足以使雷暴发展的不稳定度却很少见，即使出现，数值也较小。对于暖的月份却正好相反。很多对流风暴发生在很弱或很强的不稳定环境中，其中伴有弱不稳定的是强切变，伴有强不稳定的是弱切变。</p>
+<p>Jones和Doswell(1992)指出对流天气既可以发生在低风暴螺旋度（SRH&lt;150 m2s-2）与高对流有效位能（CAPE&gt;2500 J/kg）结合的环境中，也可以发生在相反的环境中（SRH&gt;300 m2s-2与CAPE&lt;1000 J/kg），即SRH和CAPE之间存在一种平衡关系。</p>
+<p>能量-螺旋度指数（Energy Helicity Index, EHI）是由CAPE和SRH组合的指数，它把浮力能和动力参数有效结合起来，其定义式为，</p>
+<div class="math notranslate nohighlight">
+\[EHI = \frac{CAPE \cdot SRH}{1.6 \times 10^5 (m^2 \cdot s^{-2} \cdot J \cdot kg^{-1})}\]</div>
+<p>其中SRH为风暴相对螺旋度，这里表示0-2km的总螺旋度，可见，EHI是无量纲数。</p>
+<p>EHI反映了强对流天气出现时，对流有效位能和风暴相对螺旋度之间的互相平衡的特征。EHI数值越大，发生强对流天气的潜在程度就越大，EHI较大时，出现超级单体和龙卷的可能性较大。Davies（1993）指出，大多数龙卷在RHI大于1时发生，而强烈的龙卷在EHI大于2.5时发生。</p>
 </div>
 <div class="section" id="sweat">
 <h3>强天气威胁指数SWEAT<a class="headerlink" href="#sweat" title="永久链接至标题">¶</a></h3>
+<p>强天气威胁（Severe Weather Threat, SWEAT）指数是美国龙卷预报常用的一个指数，它是根据328次龙卷资料和日常预报经验得到的，目前在很多国家和地区得到应用，它反映了不稳定能量、风向风速垂直切变对风暴强度的综合作用，表达式为，</p>
+<div class="math notranslate nohighlight">
+\[SWEAT = 12T_{d850} + 20(TT-49) + 2f_8 + f_5 + 125(S+0.2)\]</div>
+<p>其中，</p>
+<ol class="arabic simple">
+<li><span class="math notranslate nohighlight">\(T_{d850}\)</span> 为850hPa露点温度，若 <span class="math notranslate nohighlight">\(T_{d850}\)</span> 为负，则此项为零，这反映龙卷生成与暖湿的环境中</li>
+<li><span class="math notranslate nohighlight">\(TT = T_{850} + T_{d850} - 2T_{500}\)</span> 为总指数，若 TT&lt;49 ，则式中此项等于0</li>
+<li><span class="math notranslate nohighlight">\(f_8\)</span> 为850hPa的风速（海里/小时, knots）</li>
+<li><span class="math notranslate nohighlight">\(f_5\)</span> 为500hPa的风速（海里/小时, knots）</li>
+<li><span class="math notranslate nohighlight">\(S=sin(500hPa风向-850hPa风向)\)</span></li>
+</ol>
+<p>切变项 125(S+0.2)在下列4个条件中任一条件不具备便为0：</p>
+<ol class="arabic simple">
+<li>850hPa风向在130°-250°之间</li>
+<li>500hPa风向在210°-310°之间</li>
+<li>500hPa风向-850hPa风向为正</li>
+<li>850hPa风速和500hPa风速至少等于15海里/小时（7.5m/s）</li>
+</ol>
+<p>SWEAT的值越高，发生龙卷或强雷暴的可能性越大，要注意，</p>
+<ol class="arabic simple">
+<li>这个指数的高数值只是表示强天气潜在的可能性，不意味着当时出现强天气</li>
+<li>这个指数不应用于一般雷暴的预报，式中切变项和风速项等专门用以区别一般雷暴和强雷暴</li>
+</ol>
+<p>在美国，分析过去龙卷和强雷暴实例，总结它与天气的关系为，发生龙卷时SWEAT的临界值为400，发生强雷暴时的临界值为300。强雷暴是指伴有风速25m/s以上的大风，或1.9cm以上降雹的雷暴天气（美国强雷暴标准）。Ducrocq(1998)给出的对流天气阈值为大于100，与上述临界值差别很大。</p>
 </div>
 </div>
 </div>
